@@ -11,8 +11,10 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery_ujs
 //= require foundation
+//= require angular
+//= require app
+//= require routes
 //= require_tree .
 
 $(document).foundation();
