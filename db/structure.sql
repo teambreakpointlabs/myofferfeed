@@ -43,6 +43,37 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
+-- Name: product_types; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE product_types (
+    id integer NOT NULL,
+    product_type character varying(255),
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: product_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE product_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: product_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE product_types_id_seq OWNED BY product_types.id;
+
+
+--
 -- Name: products; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -97,7 +128,22 @@ CREATE TABLE schema_migrations (
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY product_types ALTER COLUMN id SET DEFAULT nextval('product_types_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY products ALTER COLUMN id SET DEFAULT nextval('products_id_seq'::regclass);
+
+
+--
+-- Name: product_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY product_types
+    ADD CONSTRAINT product_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -133,3 +179,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130621141335');
 INSERT INTO schema_migrations (version) VALUES ('20130621141345');
 
 INSERT INTO schema_migrations (version) VALUES ('20130621141358');
+
+INSERT INTO schema_migrations (version) VALUES ('20130624112707');
