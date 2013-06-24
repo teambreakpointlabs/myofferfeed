@@ -1,7 +1,60 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Product.create!(title: 'Samsung LED TV 37 Inch"',
+	link_url:'http://www.breakpointlabs.co.uk',
+	image_url:'http://www.breakpointlabs.co.uk',
+	product_type:'television',
+	old_price: '55000',
+	new_price: '50000',
+	price_off: '50000',
+	percent_off: '9',
+	retailler: 'john_lewis',
+	make: 'samsung',
+	description: 'Samsung UE37ES6710 LED HD 1080p 3D Smart TV, 37 Inch with Freeview/Freesat HD, White',
+	screen_size: 34, 
+	tv_type:'led',
+	model_no: 'UE37ES6710' 
+	)
+Product.create!(title: 'Panasonic LED TV 35 Inch"',
+	link_url:'http://www.breakpointlabs.co.uk',
+	image_url:'http://www.breakpointlabs.co.uk',
+	product_type:'television',
+	old_price: '50000',
+	new_price: '45000',
+	price_off: '5000',
+	percent_off: '10',
+	retailler: 'argos',
+	make: 'Panasonic',
+	description: 'Pansonic XS123456 LED HD 1080p 3D Smart TV, 35 Inch with Freeview/Freesat HD, Black',
+	screen_size: 34, 
+	tv_type:'led',
+	model_no: 'XS123456' 
+	)
+Product.create!(title: 'Sony Plasma TV 40 Inch"',
+	link_url:'http://www.breakpointlabs.co.uk',
+	image_url:'http://www.breakpointlabs.co.uk',
+	product_type:'television',
+	old_price: '60000',
+	new_price: '50000',
+	price_off: '10000',
+	percent_off: '17',
+	retailler: 'argos',
+	make: 'sony',
+	description: 'Sony SO123456 Plasma HD 1080p 3D TV, 40 Inch with Freeview/Freesat HD, White',
+	screen_size: 40, 
+	tv_type:'plasma',
+	model_no: 'SO123456' 
+	)
+Product.create!(title: 'Samsung LED TV 39 Inch"',
+	link_url:'http://www.breakpointlabs.co.uk',
+	image_url:'http://www.breakpointlabs.co.uk',
+	product_type:'television',
+	old_price: '58000',
+	new_price: '52000',
+	price_off: '6000',
+	percent_off: '10',
+	retailler: 'john_lewis',
+	make: 'samsung',
+	description: 'Samsung UE39ES6720 LED HD 1080p 3D Smart TV, 39 Inch with Freeview/Freesat HD, White',
+	screen_size: 39, 
+	tv_type:'led',
+	model_no: 'UE39ES6720' 
+	)

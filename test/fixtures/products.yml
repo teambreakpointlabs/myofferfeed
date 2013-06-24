@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  link_url: MyString
+  image_url: MyString
+  product_type: MyString
+  old_price: 1
+  new_price: 1
+  price_off: 1
+  percent_off: 1
+  retailler: MyString
+  make: MyString
+  description: MyText
+
+two:
+  title: MyString
+  link_url: MyString
+  image_url: MyString
+  product_type: MyString
+  old_price: 1
+  new_price: 1
+  price_off: 1
+  percent_off: 1
+  retailler: MyString
+  make: MyString
+  description: MyText

@@ -65,9 +65,9 @@
 // Grid Variables
 //
 
-// $row-width: 62.5em;
-   $column-gutter: 3em;
-// $total-columns: 12;
+   $row-width: emCalc(1000px);
+   $column-gutter: emCalc(30px);
+   $total-columns: 12;
 
 //
 // Block Grid Variables
@@ -75,7 +75,7 @@
 
 // We use this to control the maximum number of block grid elements per row
 // $block-grid-elements: 12;
-// $block-grid-default-spacing: 10px;
+   $block-grid-default-spacing: emCalc(20px);
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 // $block-grid-media-queries: true;
