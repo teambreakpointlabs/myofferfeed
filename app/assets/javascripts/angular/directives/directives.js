@@ -1,4 +1,4 @@
-directives.directive('autoComplete', function(autoCompleteService) {
+directives.directive('autoComplete',['autoCompleteService', function(autoCompleteService) {
     return {
         restrict: 'A',
         link: function(scope, elm, attrs) {
@@ -8,4 +8,4 @@ directives.directive('autoComplete', function(autoCompleteService) {
             });
         }
     };
-});
+}]);
