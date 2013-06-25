@@ -77,3 +77,23 @@ input.auto-complete {
 .ui-helper-hidden-accessible {
   display:none;	
 }
+
+
+/** Smaller devices **/
+
+@media only screen and (max-width: 768px) {
+  input.auto-complete{
+    font-size: 20px !important; 
+  }
+  span.postfix {
+    font-size: 20px !important;
+  }
+  .ui-menu{
+    font-size: 20px !important;
+  }
+}
+
+
+
+
+
