@@ -7,4 +7,5 @@ var controllers = angular.module('controllers',[]);
 
 var directives = angular.module('directives',[]);
 
-var services = angular.module('services',[]);
+var services = angular.module('services',['ngResource']);
+

@@ -1,12 +1,23 @@
 <div class="row"> 
-	<div class="large-8 columns">
-		<h1 class="subheader">This is the home page</h1>
-		<h4 class="subheader">This text is: {{data.message}} </h4>
-		  <input auto-complete type="text"/>
-    		
+  <div class="large-12 columns text-center">
+	  <h1 class="subheader">My Offer Feed</h1>
 	</div>
-	<div class="large-4 columns">
-		<h1 class="subheader">Side Bar</h1>
-		<h4 class="subheader">This is a side bar produced with the foundation framework and will slide under when resized</h4>	
-	</div>
+</div>
+<div class="row">
+	<form ng-submit="search()" ng-controller="SearchCtrl">
+	<div class="large-12 columns text-center">
+	<div class="row">
+ 		<div class="large-6 large-centered columns">
+      <div class="row collapse">
+        <div class="small-10 columns">
+          <input auto-complete type="text" class="text-center auto-complete" placeholder="Type a product name" ng-model="searchData.productType" />
+        </div>
+        <div class="small-2 columns">
+          <span class="postfix"><i class="icon-search icon"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>  
+	</form>
 </div>

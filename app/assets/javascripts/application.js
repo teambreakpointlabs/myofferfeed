@@ -12,6 +12,7 @@
 //
 //= require foundation
 //= require angular
+//= require angular-resource
 //= require app
 //= require routes
 //= require_tree .

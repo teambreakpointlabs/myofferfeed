@@ -1,7 +1,9 @@
-services.factory('autoCompleteService', [function() {
-    return {
-        getSource: function() {
-            return ['Epsom', 'Egham', 'Edinburgh','Epping', 'Ebfleet'];
-        }
-    }
-}]);
+services
+.factory('ProductType', function($resource){
+  return $resource('/product_types/:id', {
+    id: '@id'
+  });
+})
+.factory('SearchData', function(){
+	return {};
+});

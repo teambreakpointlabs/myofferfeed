@@ -13,6 +13,7 @@ files = [
   JASMINE_ADAPTER,
   'http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js',
   'spec/javascripts/lib/angular-mocks.js',
+  'spec/javascripts/lib/angular-resource.js',
   'app/assets/javascripts/app.js',
   'app/assets/javascripts/**/*.js',
   'spec/javascripts/unit/*.js'
