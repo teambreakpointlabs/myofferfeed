@@ -4,20 +4,17 @@
 	</div>
 </div>
 <div class="row">
-	<form ng-submit="search()" ng-controller="SearchCtrl">
-	<div class="large-12 columns text-center">
-	<div class="row">
  		<div class="large-6 large-centered columns">
       <div class="row collapse">
         <div class="small-10 columns">
+        <form ng-submit="search()" ng-controller="SearchCtrl">
           <input auto-complete type="text" class="text-center auto-complete" placeholder="Type a product name" ng-model="searchData.productType" />
         </div>
         <div class="small-2 columns">
           <span class="postfix"><i class="icon-search icon"></i></span>
         </div>
+        </form>
       </div>
     </div>
   </div>
-  </div>  
-	</form>
 </div>
