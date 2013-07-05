@@ -1,0 +1,117 @@
+<div class="divide"></div>
+<div class="row-wrapper-blue">
+  <div class="row">
+	  <div class="small-12 columns">
+      <div class="header-text">
+		    <span class="sosa-tv header-icon"></span>
+			  <div>
+			    <span class="header-product">television</span>
+			    <span class="header-search-name">default</span>
+			  </div>
+	    </div>
+			<div class="header-buttons">
+				<a class="pure-button pure-button-search">Save</a>
+				<a class="pure-button pure-button-search">Edit</a>
+			</div>
+	  </div>
+	</div>
+</div>
+<div class="divide"></div>
+<div class="row-wrapper-white">
+  <div class="row">
+	  <div class="large-3 columns">
+		  <div class="filter-container">
+	      <a class="pure-button pure-button-filter">Price</a>
+		    <a class="pure-button arrow"> 
+		    <span class="sosa-down_alt"></span></a>
+		    <div class="filter-label">
+					1000 - 4000
+		    </div>
+    	</div>
+	  </div>
+	  <div class="large-3 columns">
+		  <div class="filter-container">
+	      <a class="pure-button pure-button-filter">Screen</a>
+		    <a class="pure-button arrow"> 
+		    <span class="sosa-down_alt"></span></a>
+		    <div class="filter-label">
+					26 - 40
+		    </div>
+    	</div>
+	  </div>
+    <div class="large-3 columns">
+		  <div class="filter-container">
+	      <a class="pure-button pure-button-filter">Make</a>
+		    <a class="pure-button arrow"> 
+		    <span class="sosa-down_alt"></span></a>
+		    <div class="filter-label">
+					all
+		    </div>
+    	</div>
+	  </div>
+    <div class="large-3 columns">
+		  <div class="filter-container">
+	      <a class="pure-button pure-button-filter">Retailer</a>
+		    <a class="pure-button arrow"> 
+		    <span class="sosa-down_alt"></span></a>
+		    <div class="filter-label">
+					all
+		    </div>
+    	</div>
+	  </div>
+  </div>
+	<div ng-controller="SearchProductsCtrl">
+	  <div class="results-container">
+	    <li ng-repeat="product in productService.products | limitTo:numDisplayed">
+			  <div class="row result-individual">
+				  <div class="large-3 columns">
+					  <div>
+					    <img src="{{product.image_url}}" class="product-thumbnail"></img>
+					    <span class="result-field">{{product.make}} {{product.properties.screen_size}}"
+					    </span>
+				    </div>
+				  </div>
+				<div class="large-3 columns">
+					<div>
+					  <span class="sosa-tags result-icon"></span>
+					  <span class="result-field">£{{product.new_price}}</span>
+				  </div>
+				</div>
+				<div class="large-3 columns">
+					<div>
+					  <span class="sosa-tag result-icon"></span>
+					  <span class="result-field">
+					  	<span style="color:#25a9df">{{product.percent_off}}%</span> off
+					  </span>
+				  </div>
+				</div>
+				<div class="large-3 columns">
+				  <div>
+					  <span class="sosa-tag result-icon"></span>
+					  <span class="result-field">You save 
+					  	<span style="color:#25a9df">£{{product.price_off}}</span>
+					  </span>
+				  </div>
+				  </div>
+		    </div>
+		  </li>
+	  </div>
+	<div class="divide"></div>
+	</div>
+</div>
+<div class="footer">
+	<div class="logo">
+		my offer feed
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

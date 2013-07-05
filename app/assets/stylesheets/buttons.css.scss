@@ -1,0 +1,71 @@
+/** CSS for Buttons **/
+
+.pure-button {
+  /* Structure */
+  display: inline-block;
+  *display: inline; /*IE 6/7*/
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 600 !important;
+  width:136px;
+}
+
+a.pure-button.arrow{
+  width:36px !important;
+  color:#fff;
+  background:#4e81c2;
+  padding-left:10px; 
+  padding-right:10px;
+}
+
+.pure-button-search,.pure-button-filter{
+  background: #25a9df;
+  color: #fff;
+}
+
+.pure-button-login {
+  background: rgb(28, 184, 65);
+  color: #fff;
+}
+
+/** Firefox **/
+.pure-button::-moz-focus-inner{
+  padding: 0;
+  border: 0;
+}
+
+.pure-button:-moz-focusring {
+  outline-color: rgba(0, 0, 0, 0.85);
+}
+
+/** Media Queries **/
+
+@media only screen and (max-width: 999px) {
+
+  .pure-button.sign-up{
+    margin-bottom: 10px;
+  }
+
+  .pure-button{
+    width: 100% !important;
+  }
+
+  a.pure-button.arrow{
+    width: 100% !important;
+  }
+
+  .pure-button-search{
+    margin-bottom:5px; 
+  }
+
+}

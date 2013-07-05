@@ -1,0 +1,22 @@
+directives
+.directive('header', function () {
+    return {
+        restrict: 'A',
+        replace: true,
+        templateUrl:'<%= asset_path('angular/templates/header.html') %>'
+    }
+})
+.directive('icons', function (){
+	return{
+		restrict: 'A',
+		replace: true,
+		templateUrl:'<%= asset_path('angular/templates/icons.html') %>'
+	}
+})
+.directive('title', function(){
+	return{
+		restrict: 'A',
+		replace: true,
+		templateUrl:'<%= asset_path('angular/templates/title.html') %>'
+	}
+});

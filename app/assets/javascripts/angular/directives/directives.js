@@ -8,10 +8,12 @@ directives
 	        source: productTypes,
 	        minLength: 1,
 	        select: function(event, ui){
-	          scope.searchData.productType = ui.item.value;
-	        }
-	      });
-			},true);
+	           var productType = ui.item.value;
+	           scope.$apply(function(){
+	           	scope.updateProductType(productType);
+	           });
+	      	}});
+		},true);
 	  }
 	}
 });
