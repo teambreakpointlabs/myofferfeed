@@ -2,7 +2,8 @@
 
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
-    .when('/', {templateUrl: '<%= asset_path('angular/templates/index.html') %>'})
+    .when('/', {templateUrl: '<%= asset_path('angular/templates/launch.html') %>'})
+    .when('/home', {templateUrl: '<%= asset_path('angular/templates/index.html') %>'})
     .when('/app', {templateUrl: '<%= asset_path('angular/templates/app.html') %>'})
     .otherwise({redirectTo: '/'});
 }]);

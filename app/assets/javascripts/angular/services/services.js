@@ -1,4 +1,10 @@
 services
+.factory('UserEmail', ['$resource', function($resource){
+	console.log('creating');
+	return $resource('/user_email/:id',{
+		id: '@id'
+	});
+}])
 .factory('ProductType',['$resource', function($resource){
   return $resource('/product_types/:id', {
     id: '@id'

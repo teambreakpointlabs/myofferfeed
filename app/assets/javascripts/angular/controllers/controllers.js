@@ -48,6 +48,19 @@ controllers
 	$scope.loadMore = function(){
 		$scope.numDisplayed += 6;
 	}
+}])
+.controller('LaunchCtrl', ['$scope','UserEmail',function($scope, UserEmail){
+
+  $scope.register = function(form_email) {
+  	console.log("registering");
+  	//console.log(UserEmail);
+  	var obj = new UserEmail();
+  	obj.email = form_email;
+  	console.log(obj);
+  	obj.$save(function(response){
+  		console.log('saved');
+  	});
+  };
 }]);
 
 

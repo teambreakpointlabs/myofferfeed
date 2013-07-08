@@ -13,9 +13,68 @@ $input-selected-background-color: #444444;
   border-radius: $radius;
 }
 
+@mixin placeholder{
+  color:    #afafaf;
+  font-family: 'Open Sans', sans-serif;
+   &:focus{
+    color: #343434;
+   }
+}
+
 /** CSS **/
 
+/** Landing Beta Page Style **/
+
+.launch-title-row{
+  padding-top: 10% !important;
+  padding-bottom:20px !important;
+}
+
+.center{
+  text-align: center;
+}
+
+.launch-title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 60px;
+  color: #fff;
+}
+.coming-soon-text{
+  font-size: 28px;
+  color: #fff;  
+  font-family: 'Open Sans', sans-serif;
+}
+
+.signup-form{
+  padding-top:20px;
+}
+.signup-input{
+  padding-bottom:20px;
+}
+
+.signup-message{
+  font-family:'Open Sans', sans-serif;
+  font-size: 20px; 
+  color: #fff;
+}
+
+.signup-button{
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input.ng-invalid.ng-dirty {
+  background-color: #fa787e;
+}
+
+input.ng-valid.ng-dirty {
+  background: rgb(28, 184, 65);
+}
+
+
+
 /** Main Style **/
+
 .result-individual{
   padding:14px;
   border-radius: 15px;

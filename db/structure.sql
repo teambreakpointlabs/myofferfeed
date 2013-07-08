@@ -125,6 +125,37 @@ CREATE TABLE schema_migrations (
 
 
 --
+-- Name: user_emails; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE user_emails (
+    id integer NOT NULL,
+    email character varying(255),
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: user_emails_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE user_emails_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: user_emails_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE user_emails_id_seq OWNED BY user_emails.id;
+
+
+--
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -136,6 +167,13 @@ ALTER TABLE ONLY product_types ALTER COLUMN id SET DEFAULT nextval('product_type
 --
 
 ALTER TABLE ONLY products ALTER COLUMN id SET DEFAULT nextval('products_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY user_emails ALTER COLUMN id SET DEFAULT nextval('user_emails_id_seq'::regclass);
 
 
 --
@@ -152,6 +190,14 @@ ALTER TABLE ONLY product_types
 
 ALTER TABLE ONLY products
     ADD CONSTRAINT products_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: user_emails_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY user_emails
+    ADD CONSTRAINT user_emails_pkey PRIMARY KEY (id);
 
 
 --
@@ -181,3 +227,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130621141345');
 INSERT INTO schema_migrations (version) VALUES ('20130621141358');
 
 INSERT INTO schema_migrations (version) VALUES ('20130624112707');
+
+INSERT INTO schema_migrations (version) VALUES ('20130708153711');

@@ -1,0 +1,30 @@
+<div class="row launch-title-row">
+	<div class="large-12 columns center">
+ 	  <span class="launch-title">my offer feed</span>
+	</div>
+</div>
+  <div class="row" style="">
+	<div class="large-12 columns center">
+ 	  <span class="coming-soon-text">coming soon</span>
+	</div>
+</div>
+<div ng-controller="LaunchCtrl">
+<form name="signup" novalidate>
+<div class="row signup-form">
+   <div class="large-6 large-centered columns signup-input">
+      <div class="row collapse">
+        <div class="small-8 columns">
+          <input type="email" ng-model="email" name="uEmail" required placeholder="abc@email.com" onfocus="this.placeholder = ''">
+       
+          <span ng-show="signup.uEmail.$error.required" class="signup-message" style="">Please enter a valid email</span>
+           <span ng-show="signup.uEmail.$error.email" class="signup-message">This is not a valid email</span>
+        </div>
+        <div class="small-4 columns">
+          <button class="postfix radius signup-button"  ng-click="register(email)" ng-disabled="signup.$invalid">Sign Up for Beta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+
