@@ -23,6 +23,7 @@ directives
 		link: function(scope, elm, attrs){
 			scope.$watch(attrs.ngModel, function(v){
 				scope.exists = false;
+				scope.success = false;
 			});
 		}
 	};

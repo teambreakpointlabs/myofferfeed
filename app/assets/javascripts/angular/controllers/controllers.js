@@ -62,9 +62,11 @@ controllers
   	obj.$save(function(response){
 
   		console.log('saved');
+  		$scope.success = true;
 
   	}, function(response){
   			$scope.exists = true;
+
   			console.log('exists');
   	});
   };

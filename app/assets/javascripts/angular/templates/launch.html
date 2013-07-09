@@ -12,19 +12,25 @@
 
 <form name="signup" novalidate>
 <div class="row signup-form">
-   <div class="large-6 large-centered columns signup-input">
-      <div class="row collapse">
-        <div class="small-8 columns">
+   <div class="large-8 large-centered columns signup-input">
+     <div class="row">
+     	<div class="large-8 columns">
           <input type="email" name="input" ng-model="input" required placeholder="abc@email.com" class="" sign-up-input>
+          <div style="padding-bottom:20px;">
           <span ng-show="signup.input.$error.email" class="signup-message">
         Not valid email!</span>
-            <span ng-show="exists" class="signup-message">
+          <span ng-show="exists" class="signup-message">
         Email exists already!</span>
-        </div>
-        <div class="small-4 columns">
-          <button class="postfix radius signup-button"  ng-click="register(input)" ng-disabled="signup.$invalid">Sign Up for Beta</button>
-        </div>
+        <span ng-show="success" class="signup-message">
+        Thanks for signing up!</span>
+    </div>
       </div>
+        <div class="large-4 columns signup-input">
+          <button class="postfix signup-button"  ng-click="register(input)" ng-disabled="signup.$invalid">Sign Up for Beta</button>
+        </div>
+    </div>
+    </div>
+ 
     </div>
   </div>
   </div>
