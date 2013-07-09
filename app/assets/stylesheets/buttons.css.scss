@@ -48,6 +48,10 @@ a.pure-button.arrow{
   outline-color: rgba(0, 0, 0, 0.85);
 }
 
+.pure-button-signup{
+    width: 100% !important;
+}
+
 /** Media Queries **/
 
 @media only screen and (max-width: 999px) {

@@ -16,6 +16,7 @@ $input-selected-background-color: #444444;
 @mixin placeholder{
   color:    #afafaf;
   font-family: 'Open Sans', sans-serif;
+  font-size:18px;
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
@@ -61,8 +62,8 @@ $input-selected-background-color: #444444;
 .signup-form{
   padding-top:20px;
 }
-.signup-input{
- 
+.signup-email{
+  font-size:16px !important;
 }
 
 .signup-message{
