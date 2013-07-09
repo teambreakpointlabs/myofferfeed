@@ -16,10 +16,19 @@ $input-selected-background-color: #444444;
 @mixin placeholder{
   color:    #afafaf;
   font-family: 'Open Sans', sans-serif;
-   &:focus{
-    color: #343434;
-   }
 }
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    @include placeholder;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ @include placeholder;}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+ @include placeholder;}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+ @include placeholder;}
+
+
 
 /** CSS **/
 
@@ -44,6 +53,10 @@ $input-selected-background-color: #444444;
   color: #fff;  
   font-family: 'Open Sans', sans-serif;
 }
+.signup-input{
+ font-family: 'Open Sans', sans-serif; 
+ color: #afafaf;  
+}
 
 .signup-form{
   padding-top:20px;
@@ -62,15 +75,6 @@ $input-selected-background-color: #444444;
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
 }
-
-input.ng-invalid.ng-dirty {
-  background-color: #fa787e;
-}
-
-input.ng-valid.ng-dirty {
-  background: rgb(28, 184, 65);
-}
-
 
 
 /** Main Style **/

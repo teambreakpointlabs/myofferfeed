@@ -16,4 +16,14 @@ directives
 		},true);
 	  }
 	}
+})
+.directive('signUpInput', function(){
+	return{
+		restrict: 'A',
+		link: function(scope, elm, attrs){
+			scope.$watch(attrs.ngModel, function(v){
+				scope.exists = false;
+			});
+		}
+	};
 });

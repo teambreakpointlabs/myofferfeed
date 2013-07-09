@@ -51,14 +51,21 @@ controllers
 }])
 .controller('LaunchCtrl', ['$scope','UserEmail',function($scope, UserEmail){
 
+
   $scope.register = function(form_email) {
   	console.log("registering");
   	//console.log(UserEmail);
   	var obj = new UserEmail();
   	obj.email = form_email;
   	console.log(obj);
+  	register_email = form_email;
   	obj.$save(function(response){
+
   		console.log('saved');
+
+  	}, function(response){
+  			$scope.exists = true;
+  			console.log('exists');
   	});
   };
 }]);
