@@ -1,0 +1,83 @@
+controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductService','$dialog','SearchService','AffiliateService',function($scope, $location, ProductService, $dialog, SearchService, AffiliateService){
+
+	$scope.productService = ProductService;
+	$scope.products = ProductService.products;
+	$scope.productsDisplayed = ProductService.productsDisplayed;
+
+	$scope.searchService = SearchService;
+	$scope.currentSearch = SearchService.currentSearch;
+
+	$scope.getProducts = function(productType){
+		console.log($scope.currentSearch);
+		$scope.searchService.populateInitialSearch(productType);
+		console.log($scope.currentSearch);
+		$scope.productService.getProducts(productType);
+		$location.path('/app');
+		AffiliateService.applyAffiliateLinks();
+	}
+
+	$scope.showMore = function(){
+		$scope.productsDisplayed += 6;
+		AffiliateService.applyAffiliateLinks();
+	}
+    
+	$scope.displayProduct = function(product){
+		var dialogOpts = {
+			resolve: {
+				product: function(){
+					return product;
+				}
+			},
+			dialogFade: true,
+			controller: 'DialogCtrl'
+		};
+		var dialog = $dialog.dialog(dialogOpts);
+		dialog.open('<%= asset_path('angular/templates/productModal.html') %>');
+	}
+}])
+.controller('AttributeCtrl', ['$scope', '$dialog','FilterDataService', function($scope, $dialog, FilterDataService){
+
+	$scope.attributes = FilterDataService.attributes;
+
+	$scope.filter = function(type){
+
+		$scope.attributes.modal = type;
+
+		var attributes = $scope.attributes;
+
+		var opts = {
+			resolve: {
+				attributes: function(){
+					return attributes;
+				}
+			},
+			backdropClick: false,
+			dialogFade: true,
+			controller: 'DialogFilterCtrl'
+		};
+		var dialog = $dialog.dialog(opts);
+		dialog.open('<%= asset_path('angular/templates/filterModal.html') %>');
+	}
+}])
+.controller('DialogCtrl', ['$scope', 'product', function($scope, product){
+	$scope.product = product;
+}])
+.controller('DialogFilterCtrl',['$scope', 'dialog','attributes','ProductService','AffiliateService', function($scope, dialog, attributes,ProductService, AffiliateService){
+
+	$scope.attributes = attributes;
+
+	$scope.close = function(type){
+		$scope.attributes.modal = '';
+		ProductService.getTvsByAttributes(attributes);
+		AffiliateService.applyAffiliateLinks();
+		dialog.close();
+	}
+
+}]);
+
+
+
+
+
+
+

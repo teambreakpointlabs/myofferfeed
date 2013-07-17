@@ -17,54 +17,23 @@
 	</div>
 </div>
 <div class="divide"></div>
+
 <div class="row-wrapper-white">
-  <div class="row">
-	  <div class="large-3 columns">
-		  <div class="filter-container">
-	      <a class="pure-button pure-button-filter">Price</a>
-		    <a class="pure-button arrow"> 
-		    <span class="sosa-down_alt"></span></a>
-		    <div class="filter-label">
-					all
-		    </div>
-    	</div>
-	  </div>
-	  <div class="large-3 columns">
-		  <div class="filter-container">
-	      <a class="pure-button pure-button-filter">Screen</a>
-		    <a class="pure-button arrow"> 
-		    <span class="sosa-down_alt"></span></a>
-		    <div class="filter-label">
-					26 - 40
-		    </div>
-    	</div>
-	  </div>
-    <div class="large-3 columns">
-		  <div class="filter-container">
-	      <a class="pure-button pure-button-filter">Make</a>
-		    <a class="pure-button arrow"> 
-		    <span class="sosa-down_alt"></span></a>
-		    <div class="filter-label">
-					all
-		    </div>
-    	</div>
-	  </div>
-    <div class="large-3 columns">
-		  <div class="filter-container">
-	      <a class="pure-button pure-button-filter">Retailer</a>
-		    <a class="pure-button arrow"> 
-		    <span class="sosa-down_alt"></span></a>
-		    <div class="filter-label">
-					all
-		    </div>
-    	</div>
-	  </div>
-  </div>
+<div ng-controller="AttributeCtrl">
+	<div television-attribute-filter></div>
+</div>
 	<div ng-controller="SearchProductsCtrl">
 	  <div class="results-container">
-	    <li ng-repeat="product in productService.products | limitTo:numDisplayed">
-			  <div class="row result-individual">
+	  	  <div style="padding-top:40px;text-align:center;font-family:'Open Sans'; font-size:22px; color: #4e81c2;" ng-show="products.length==0">
+		  	No Products Found
+		  </div>
+	    <li ng-repeat="product in products | limitTo:productsDisplayed">
+			  <div class="row result-individual" ng-click="displayProduct(product)">
 				  <div class="large-3 columns">
+				  	<div>
+				  		<a href="http://test.skimlinks.com">SKIMLINKS</a>
+				  	</div>
+
 					  <div>
 					    <img src="{{product.image_url}}" class="product-thumbnail"></img>
 					    <span class="result-field">{{product.make}} {{product.properties.screen_size}}"
@@ -95,6 +64,9 @@
 				  </div>
 		    </div>
 		  </li>
+		  <button class="pure-button" style="width:100%;" ng-click="showMore()" ng-show="productService.products.length>0">
+		  	show more
+		  </div>
 	  </div>
 	<div class="divide"></div>
 	</div>

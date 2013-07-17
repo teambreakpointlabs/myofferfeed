@@ -1,0 +1,13 @@
+controllers.controller('LaunchCtrl', ['$scope','UserEmail',function($scope, UserEmail){
+  $scope.register = function(form_email) {
+  	var obj = new UserEmail();
+  	obj.email = form_email;
+  	register_email = form_email;
+  	obj.$save(function(response){
+  		$scope.success = true;
+  	}, function(response){
+        //error
+  			$scope.exists = true;
+  	});
+  };
+}]);

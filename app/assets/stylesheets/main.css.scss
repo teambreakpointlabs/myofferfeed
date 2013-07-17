@@ -99,6 +99,11 @@ body{
   text-rendering: optimizeLegibility;
 }
 
+a{
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
 .divide{
   height: 4px; 
   background: #25a9df;
@@ -123,6 +128,7 @@ body{
     
     .sign-up{
       margin-right: 10px;
+      color: #343434 !important;
     }
 
   }
@@ -286,7 +292,7 @@ li{
 }
 
 .results-container{
-  height: 520px; 
+  height: 540px; 
   padding-top:12px; 
   overflow:scroll;
 }

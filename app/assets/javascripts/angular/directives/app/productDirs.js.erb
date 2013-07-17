@@ -1,0 +1,14 @@
+directives
+.directive('attributeFilter', function(){
+	return{
+		restrict: 'A',
+		templateUrl: '<%= asset_path('angular/templates/attributeFilter.html') %>',
+		scope:{
+			attribute: '=',
+			filter:'&'
+		},
+		link: function(scope,elm,attrs){
+			scope.filter_title = attrs.type;
+		}	
+	};
+});

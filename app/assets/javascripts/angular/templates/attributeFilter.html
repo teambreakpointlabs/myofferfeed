@@ -1,0 +1,9 @@
+<div class="filter-container" ng-click="filter({type:filter_title})">
+	<a class="pure-button pure-button-filter">{{filter_title}}</a>
+	<a class="pure-button arrow"> 
+		<span class="sosa-down_alt"></span>
+  </a>
+
+	<div class="filter-label" ng-show="attribute.val.max">{{attribute.val.min}} - {{attribute.val.max}}</div>
+	<div class="filter-label" ng-show="!attribute.val.max">{{attribute.val}}</div>
+</div>
