@@ -1,0 +1,12 @@
+<div class="filter-container" ng-click="filter({type:filter_title})">
+	<a class="pure-button pure-button-filter">{{filter_title}}</a>
+	<a class="pure-button arrow"> 
+		<span class="sosa-down_alt"></span>
+    </a>
+
+	<div class="filter-label" ng-show="filter_title=='price'">{{search.price_min}} - {{search.price_max}}</div>
+	<div class="filter-label" ng-show="filter_title=='screen'">{{search.screen_min}} - {{search.screen_max}}</div>
+	<div class="filter-label" ng-show="filter_title=='make'">{{search.makes[0]}}</div>
+	<div class="filter-label" ng-show="filter_title=='retailer'">{{search.retailers[0]}}</div>
+	<!-- <div class="filter-label" ng-show="!attribute.val.max">{{attribute.val}}</div> -->
+</div>

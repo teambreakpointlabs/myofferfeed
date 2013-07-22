@@ -26,4 +26,11 @@ directives
 		replace: true,
 		templateUrl:'<%= asset_path('angular/templates/televisionAttributeFilter.html')%>'
 	}
+})
+.directive('televisionSearchFilter', function(){
+	return{
+		restrict: 'A',
+		replace: true,
+		templateUrl: '<%= asset_path('angular/templates/televisionSearchFilter.html')%>'
+	}
 });

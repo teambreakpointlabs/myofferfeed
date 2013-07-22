@@ -2,7 +2,7 @@
 
 app.config(['$routeProvider','$httpProvider',function($routeProvider, $httpProvider) {
   $routeProvider
-    .when('/', {templateUrl: '<%= asset_path('angular/templates/launch.html') %>'})
+    .when('/', {controller: 'SearchProductsCtrl', templateUrl: '<%= asset_path('angular/templates/launch.html') %>'})
     .when('/home', {templateUrl: '<%= asset_path('angular/templates/index.html') %>'})
     .when('/app', {templateUrl: '<%= asset_path('angular/templates/app.html') %>'})
     .otherwise({redirectTo: '/'});

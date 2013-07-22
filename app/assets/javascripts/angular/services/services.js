@@ -14,58 +14,58 @@ services
 		id: '@id'
 	});
 }])
-.factory('ProductService', ['Product', function(Product){
-	var originalProducts = [];
+.factory('ProductService',['Product','SearchService', function(Product, SearchService){
 	var products = [];
 	var productsDisplayed = 6;
 
-	function getTvsByAttributes(attributes){
-		console.log('orig length - ' + originalProducts.length);
-		var priceMin, priceMax, screenMin, screenMax, make, retailer;
-		
-		for (var key in attributes)
-			{
-			   if (attributes.hasOwnProperty(key))
-			   {
-			   		if (key=='price'){
-			   		  priceMin = attributes[key].val.min;
-			   		  priceMax = attributes[key].val.max;
-			   		}else if (key=='screen'){
-			   			screenMin = attributes[key].val.min;
-			   			screenMax = attributes[key].val.max
-			   		}else if (key == 'make'){
-			   			make = attributes[key].val;
-			   		}else if (key == 'retailer'){
-			   			retailer = attributes[key].val;
-			   		}
-			   }
+	function meetsCriteria(product, currentSearch){
+		console.log(product);
+		console.log(currentSearch);
+		if ((product.new_price < currentSearch.price_min) || (product.new_price > currentSearch.price_max)){
+			return false;
+		}
+
+		if ((currentSearch.makes[0]!="all")&&($.inArray(product.make, currentSearch.makes)==-1) && (currentSearch.makes.length!=0)){
+			return false;
+		}
+		if ((currentSearch.retailers[0]!="all")&&($.inArray(product.retailler, currentSearch.retailers)==-1) && (currentSearch.retailers.length!=0)){
+			return false;
+		}
+		if (product.product_type =='television'){
+			if ((product.properties.screen_size < currentSearch.screen_min) || (product.properties.screen_size > currentSearch.screen_max)){
+				return false;
 			}
-			 var tvs = [];
-			 for (var i=0; i<originalProducts.length; i++){
-			 	if ((originalProducts[i].new_price <= priceMax && 
-			 		originalProducts[i].new_price >= priceMin) && 
-			 		(originalProducts[i].properties.screen_size <= screenMax && originalProducts[i].properties.screen_size >= screenMin)){
-			 			tvs.push(originalProducts[i]);
-			 	}
-			 }
-			 angular.copy(tvs, products);
+		}
+		//if the product fulfils all search criteria then return true
+		return true;
 	}
 
-	function getProducts(productType){
-		console.log("ProductService getProducts with product type " + productType);
-			Product.query({product_type: productType},
-			function (data) {
-				  var retProducts = data;
-				  originalProducts = data;
-				  angular.copy(retProducts, products);
-				});
+	function getProductsByCurrentSearch(){
+		console.log('getting products by current search of type...');
+		console.log(SearchService.currentSearch.product_type);
+		Product.query({product_type: SearchService.currentSearch.product_type},
+			function(data){
+				filterProducts(data);
+			});
 	}
+
+	function filterProducts(productsToFilter){
+		var filteredProducts = [];
+		for (var i = 0; i < productsToFilter.length; i++){
+			var productToCheck = productsToFilter[i];
+			var addToProductsList = meetsCriteria(productToCheck, SearchService.currentSearch);
+			if (addToProductsList){
+				filteredProducts.push(productToCheck);
+			}
+		}
+		angular.copy(filteredProducts, products);
+	}
+
 	return {
 		products: products,
-		getProducts: getProducts,
-		getTvsByAttributes: getTvsByAttributes,
+		getProductsByCurrentSearch: getProductsByCurrentSearch,
 		productsDisplayed: productsDisplayed
-	}}])
+}}])
 .factory('ProductTypeService',['ProductType', function(ProductType){
 	var productTypes = [];
 	
@@ -85,71 +85,61 @@ return {
 
 	 productTypes: productTypes,
 	 getProductTypes: getProductTypes
-
 }}])
-.factory('SearchService', function(){
+.factory('SearchService',['$cookieStore', function($cookieStore){
 
 	var currentSearch = {};
 
-	// currentSearch will always exist in the session once search page has
-	// been visited by user
-	// call this when first search is done or (potentially - when a search with a new
-	// product type is conducted)
-	function populateInitialSearch(productType){
+  function populateSearch(){
+  	console.log('populate search');
+  	var search = $cookieStore.get('currentSearch');
+  	if (search!=null){
+  		console.log('cookies found search');
+  	  angular.copy(search, currentSearch);
+    }else{
+    	console.log('cookies have no search');
+    }
+  }
 
-    var initialSearch = {
-    	product_type: productType,
-    	price_min: 0,
-    	price_max: 'No Max',
-    	retailers: [],
-    	makes: [],
-    	opts: {}
-    };
+	function saveInitialSearch(productType){
+		console.log('save initialSearch search');
+    var initialSearch;
 
     switch (productType){
     	case 'television':
-    	initialSearch.opts['screen_min'] = 0;
-    	initialSearch.opts['screen_max'] = 'No Max';
-    	initialSearch.opts['tv_type'] = [];
+    	initialSearch = new TvSearch();
     }
-    angular.copy(initialSearch, currentSearch);
+    $cookieStore.put('currentSearch', initialSearch);
+    console.log('saved...');
+    console.log($cookieStore.get('currentSearch'));
+    //angular.copy(initialSearch, currentSearch);
+	}
 
+	function saveCurrentSearchInSession(updatedSearch){
+		console.log("saving search in session...");
+		$cookieStore.put('currentSearch', updatedSearch);
+		console.log($cookieStore.get('currentSearch'));
+	}
+
+	function isSearchInSession(){
+		console.log("checking if search is in session...");
+		var cookieSearch = $cookieStore.get('currentSearch');
+			if (cookieSearch == null){
+				console.log('search not found in session');
+				return false;
+			}else{
+				console.log('search found in session');
+				angular.copy(cookieSearch, currentSearch);
+				return true;
+			}
 	}
 	return {
 		currentSearch: currentSearch,
-		populateInitialSearch: populateInitialSearch
+		saveCurrentSearchInSession: saveCurrentSearchInSession,
+		populateSearch: populateSearch,
+		saveInitialSearch: saveInitialSearch
 	}
-})
-.factory('FilterDataService', function(){
-	var attributes = {
-		price: {
-			modal: false,
-			val: {
-				min: 0,
-				max: 5000
-			}
-		},
-		screen: {
-			modal: false,
-			val: {
-				min: 0,
-				max: 60
-			}
-		},
-		make:{
-			modal: false,
-			val: 'all'
-		},
-		retailer:{
-			modal: false,
-			val: 'all'
-		},
-		modal: ''
-	};
-	return {
-		attributes: attributes
-	}
-})
+}])
 .factory('AffiliateService', function(){
 	//execute skimlinks function on links appended to DOM
 	var applyAffiliateLinks = function(){

@@ -19,10 +19,12 @@
 <div class="divide"></div>
 
 <div class="row-wrapper-white">
-<div ng-controller="AttributeCtrl">
+<!-- <div ng-controller="AttributeCtrl">
 	<div television-attribute-filter></div>
-</div>
+</div> -->
 	<div ng-controller="SearchProductsCtrl">
+			<div television-search-filter></div>
+			{{productsFound}}
 	  <div class="results-container">
 	  	  <div style="padding-top:40px;text-align:center;font-family:'Open Sans'; font-size:22px; color: #4e81c2;" ng-show="products.length==0">
 		  	No Products Found
@@ -31,7 +33,7 @@
 			  <div class="row result-individual" ng-click="displayProduct(product)">
 				  <div class="large-3 columns">
 				  	<div>
-				  		<a href="http://test.skimlinks.com">SKIMLINKS</a>
+				  		<!-- <a href="http://test.skimlinks.com">SKIMLINKS</a> -->
 				  	</div>
 
 					  <div>

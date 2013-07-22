@@ -11,4 +11,17 @@ directives
 			scope.filter_title = attrs.type;
 		}	
 	};
+})
+.directive('searchFilter', function(){
+	return{
+		restrict: 'A',
+		templateUrl: '<%= asset_path('angular/templates/searchFilter.html')%>',
+		scope:{
+			search: '=',
+			filter:'&'
+		},
+		link: function(scope,elm,attrs){
+			scope.filter_title = attrs.type;
+		}
+	}
 });
