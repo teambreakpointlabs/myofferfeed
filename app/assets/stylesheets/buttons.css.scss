@@ -38,8 +38,7 @@ a.pure-button.arrow{
 }
 
 /** Firefox **/
-.pure-button:
--moz-focus-inner{
+.pure-button:-moz-focus-inner{
   padding: 0;
   border: 0;
 }
