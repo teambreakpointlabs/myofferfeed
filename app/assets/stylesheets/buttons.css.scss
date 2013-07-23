@@ -1,9 +1,8 @@
 /** CSS for Buttons **/
 
 .pure-button {
-  /* Structure */
   display: inline-block;
-  *display: inline; /*IE 6/7*/
+  *display: inline;
   zoom: 1;
   line-height: normal;
   white-space: nowrap;
@@ -15,7 +14,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Open Sans', Sans-Serif !important;
   font-weight: 600 !important;
   width:136px;
 }
@@ -39,7 +38,8 @@ a.pure-button.arrow{
 }
 
 /** Firefox **/
-.pure-button::-moz-focus-inner{
+.pure-button:
+-moz-focus-inner{
   padding: 0;
   border: 0;
 }
