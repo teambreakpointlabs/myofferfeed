@@ -143,7 +143,7 @@ return {
 .factory('AffiliateService', function(){
 	//execute skimlinks function on links appended to DOM
 	var applyAffiliateLinks = function(){
-			$.ajax({
+		$.ajax({
  		  url: 'http://s.skimresources.com/js/54354X1305234.skimlinks.js',
  		  dataType: "script"
 		});
