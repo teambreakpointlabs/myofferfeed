@@ -87,7 +87,7 @@ CREATE TABLE products (
     new_price integer,
     price_off integer,
     percent_off integer,
-    retailler character varying(255),
+    retailer character varying(255),
     make character varying(255),
     description text,
     created_at timestamp without time zone NOT NULL,

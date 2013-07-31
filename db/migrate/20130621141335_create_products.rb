@@ -9,7 +9,7 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :new_price
       t.integer :price_off
       t.integer :percent_off
-      t.string :retailler
+      t.string :retailer
       t.string :make
       t.text :description
 

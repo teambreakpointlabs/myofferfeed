@@ -31,24 +31,24 @@
 		  </div>
 	    <li ng-repeat="product in products | limitTo:productsDisplayed">
 			  <div class="row result-individual" ng-click="displayProduct(product)">
-				  <div class="large-3 columns">
+				  <div class="large-4 columns">
 				  	<div>
 				  		<!-- <a href="http://test.skimlinks.com">SKIMLINKS</a> -->
 				  	</div>
 
 					  <div>
 					    <img src="{{product.image_url}}" class="product-thumbnail"></img>
-					    <span class="result-field">{{product.make}} {{product.properties.screen_size}}"
+					    <span class="result-field"><span style="color:#4e81c2;"> {{product.make}} {{product.properties.screen_size}}" {{product.properties.tv_type}}</span>
 					    </span>
 				    </div>
 				  </div>
 				<div class="large-3 columns">
 					<div>
 					  <span class="sosa-tags result-icon"></span>
-					  <span class="result-field">£{{product.new_price}}</span>
+					  <span class="result-field"><span style="color:#25a9df;">£{{product.new_price}}</span><span style="font-size:16px;"> <del> was £{{product.old_price}}</del></span>
 				  </div>
 				</div>
-				<div class="large-3 columns">
+				<div class="large-2 columns">
 					<div>
 					  <span class="sosa-tag result-icon"></span>
 					  <span class="result-field">
@@ -78,14 +78,3 @@
 		my offer feed
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
