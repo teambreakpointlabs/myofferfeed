@@ -3,13 +3,14 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
  	$scope.productService = ProductService;
 	$scope.products = ProductService.products;
 	$scope.productsDisplayed = ProductService.productsDisplayed;
-
+	$scope.productService.order = ProductService.order;
+	console.log('order =' + $scope.productService.order);
 	$scope.searchService = SearchService;
 	$scope.currentSearch = SearchService.currentSearch;
 
-	if ($cookieStore.get('currentSearch')==null){
-		$location.path("/home");
-	}
+	// if ($cookieStore.get('currentSearch')==null){
+	// 	$location.path("/home");
+	// }
 
 	$scope.searchService.populateSearch();
 	$scope.productService.getProductsByCurrentSearch();
@@ -18,7 +19,7 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
   
 	$scope.getProducts = function(productType){
 		$scope.searchService.saveInitialSearch(productType);
-		$location.path('/app');
+		$location.path('/other');
 		AffiliateService.applyAffiliateLinks();
 	}
 
@@ -39,6 +40,16 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 		};
 		var dialog = $dialog.dialog(dialogOpts);
 		dialog.open('<%= asset_path('angular/templates/productModal.html') %>');
+	}
+	$scope.items = [
+      ["-percent_off", "saving"],
+      ["new_price", "price"],
+      ["properties.screen_size", "screen"]
+    ];
+
+	$scope.setOrder = function(orderBy){
+		console.log('setting order - ' + orderBy);
+		$scope.productService.order = orderBy;
 	}
 
 	$scope.filter = function(type){
@@ -98,6 +109,31 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
   	AffiliateService.applyAffiliateLinks();
 		dialog.close();
 	}
+}])
+.controller('SortProductsCtrl',['$scope', 'ProductService', function($scope, ProductService){
+	$scope.productService = ProductService;
+	$scope.productService.order = ProductService.order;
+
+
+    $scope.items = [
+      ["-percent_off", "Saving %"],
+      ["new_price", "Price"],
+      ["properties.screen_size", "Screen Size"]
+    ];
+
+	$scope.setOrder = function(orderBy){
+		console.log('setting order - ' + orderBy);
+		$scope.productService.order = orderBy;
+	}
+}]).controller('DemoController',['$scope', function($scope) {
+  $scope.images = [1, 2, 3, 4, 5, 6, 7, 8];
+
+  $scope.loadMore = function() {
+    var last = $scope.images[$scope.images.length - 1];
+    for(var i = 1; i <= 8; i++) {
+      $scope.images.push(last + i);
+    }
+  }
 }]);
 
 

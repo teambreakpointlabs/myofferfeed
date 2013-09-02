@@ -17,10 +17,11 @@ services
 .factory('ProductService',['Product','SearchService', function(Product, SearchService){
 	var products = [];
 	var productsDisplayed = 6;
+	var order = ['new_price','price'];
 
 	function meetsCriteria(product, currentSearch){
-		console.log(product);
-		console.log(currentSearch);
+		//console.log(product);
+		//console.log(currentSearch);
 		if ((product.new_price < currentSearch.price_min) || (product.new_price > currentSearch.price_max)){
 			return false;
 		}
@@ -28,7 +29,7 @@ services
 		if ((currentSearch.makes[0]!="all")&&($.inArray(product.make, currentSearch.makes)==-1) && (currentSearch.makes.length!=0)){
 			return false;
 		}
-		if ((currentSearch.retailers[0]!="all")&&($.inArray(product.retailler, currentSearch.retailers)==-1) && (currentSearch.retailers.length!=0)){
+		if ((currentSearch.retailers[0]!="all")&&($.inArray(product.retailer, currentSearch.retailers)==-1) && (currentSearch.retailers.length!=0)){
 			return false;
 		}
 		if (product.product_type =='television'){
@@ -64,7 +65,8 @@ services
 	return {
 		products: products,
 		getProductsByCurrentSearch: getProductsByCurrentSearch,
-		productsDisplayed: productsDisplayed
+		productsDisplayed: productsDisplayed,
+		order: order
 }}])
 .factory('ProductTypeService',['ProductType', function(ProductType){
 	var productTypes = [];
@@ -111,7 +113,7 @@ return {
     }
     $cookieStore.put('currentSearch', initialSearch);
     console.log('saved...');
-    console.log($cookieStore.get('currentSearch'));
+    //console.log($cookieStore.get('currentSearch'));
     //angular.copy(initialSearch, currentSearch);
 	}
 

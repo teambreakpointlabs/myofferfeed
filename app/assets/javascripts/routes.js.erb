@@ -5,10 +5,13 @@ app.config(['$routeProvider','$httpProvider',function($routeProvider, $httpProvi
     .when('/', {controller: 'SearchProductsCtrl', templateUrl: '<%= asset_path('angular/templates/launch.html') %>'})
     .when('/home', {templateUrl: '<%= asset_path('angular/templates/index.html') %>'})
     .when('/app', {templateUrl: '<%= asset_path('angular/templates/app.html') %>'})
+    .when('/other', {templateUrl: '<%= asset_path('angular/templates/other.html') %>'})
+    .when('/scroll',{templateUrl: '<%= asset_path('angular/templates/infiniteScroll.html')%>'})
+    .when('/redesign',{templateUrl: '<%= asset_path('angular/templates/appRedesign.html')%>'})
     .otherwise({redirectTo: '/'});
 
     var numLoadings = 0;
-    var loadingScreen = $('<div style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:10000;background-color:rgba(192,214,252,0.2);"></div>')
+    var loadingScreen = $('<div style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:10000;background-color:rgba(192,214,252,0.8);"></div>')
             .appendTo($('body')).hide();
     $httpProvider.responseInterceptors.push(function() {
             return function(promise) {

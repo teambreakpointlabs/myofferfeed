@@ -1,7 +1,10 @@
 namespace :data do
-	desc "import product data from scraped sites"
+	desc "scrape and import product data"
+	task :scrape => :environment do
+      sh %{casperjs lib/tasks/tv_scrape.js}
+	end
 	task :import => :environment do
-		file = File.open("lib/tasks/tv_scrape.txt")
+		file = File.open("lib/tasks/tmp/tv_scrape.txt")
 		file.each do |line|
 			attrs = line.split(";")
 			p = Product.new

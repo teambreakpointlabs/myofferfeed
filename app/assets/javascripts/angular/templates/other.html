@@ -1,0 +1,96 @@
+<div class="topbar">
+	<div class="title">
+		myofferfeed
+	</div>
+</div>
+<div ng-controller="SearchProductsCtrl">
+<div class="product-type-container">
+<div class="bubble" style=" box-shadow: 0px 2px 2px -2px #afafaf,0 -2px 2px -2px #afafaf;">
+	<div class="section_title" style="padding-top:10px;border-top: 1px solid #f6f6f6;border-bottom: 1px solid #f6f6f6;margin-top: 10px;margin-bottom: 15px;">
+		product type <!-- <span class="sosa-down_alt"></span> -->
+	</div>
+	<div class="product_section">
+	 <span class="sosa-tv icon"> <span class="product">television</span> </span>
+	</div>
+
+</div>
+</div>
+<div class="filter-container">
+<div class="bubble" style="height:445px; box-shadow: 0px 2px 2px -2px #afafaf,0 -2px 2px -2px #afafaf;">
+	<div class="section_title" style="padding-top:10px;border-top: 1px solid #f6f6f6;border-bottom: 1px solid #f6f6f6;margin-top: 10px; margin-bottom:10px;">
+		filter by
+	</div>
+		<div search-filter type="price" search="currentSearch" filter="filter(type)"></div>
+		<div search-filter type="make" search="currentSearch" filter="filter(type)"></div>
+		<div search-filter type="retailer" search="currentSearch" filter="filter(type)"></div>
+		<div search-filter type="screen" search="currentSearch" filter="filter(type)"></div>
+	
+	<div class="section_title" style="padding-top:10px;border-top: 1px solid #f6f6f6;border-bottom: 1px solid #f6f6f6;margin-top: 10px;margin-bottom: 15px;">
+		search options
+	</div>
+	<div>
+		<div class="pure-button" style="color:#343434 !important;margin-bottom:10px;font-weight:400 !important;font-family:'Open Sans',background: #f6f6f6 !important;" disabled><!-- save search -->Coming Soon</div>
+		<!-- <a class="pure-button" style="color:#343434 !important;font-weight:400 !important;font-family:'Open Sans', background: #f6f6f6 !important;" href="#"> view saved</a> -->
+	</div>
+</div>
+</div>
+<div class="main_section" style="width:880px;">
+	<div class="main_section_bubble" style="box-shadow: 0px 2px 2px -2px #afafaf,0 -2px 2px -2px #afafaf;">
+		<div style="border-bottom:1px solid #f6f6f6; padding-bottom:20px;border-top:1px solid #f6f6f6;margin-top:5px;padding-top:5px;">
+		<div class="main_section_title" style="margin-top:10px; margin-left:10px;">
+			<i class="icon-ok" ng-show="products.length>0"></i>
+			<i class="icon-remove" ng-show="products.length==0"></i>
+			{{products.length}} results found
+		
+		</div>
+		<a class="dropdown-toggle"> 
+		 
+		<div class="main_section_title right" style="margin-top:10px; width:15%;padding-right:5px;">
+			
+			<li class="dropdown" ng-controller="SearchProductsCtrl">
+			  <div style="color:#5284BF !important;">
+			  {{productService.order[1]}}<span class="sosa-down_alt arrow"></span>
+			  </div>
+			
+ 		 	<ul class="dropdown-menu" style="background: #5284BF;width:150px !important;">
+	    		<li ng-repeat="order in items" style="padding-bottom:5px;">
+	      		  <a ng-click="setOrder(order)" style="background:#5284BF;">{{order[1]}}</a>
+	    		</li>
+  			</ul>
+		</li>
+
+		</div> </a>
+		<div class="main_label" style="margin-top:10px;">
+			sort by
+		</div>
+		</div>
+		<div class="main_section_results" style="">
+			  <li ng-repeat="product in products | orderBy: productService.order">
+			  	<div class="result"  style="height:180px;">
+				<span class="result_image" style="" >
+					<img style="padding-top:10px;image-size:100%;width:200px;" src="{{product.image_url}}"></img>
+				</span>
+				<div class="result_details" style="width:260px;">
+					<span class="product_title">{{product.make}} {{product.properties.screen_size}}" {{product.properties.tv_type}} </span>
+<div class="price"><span class="sosa-tags icon"></span><span class="price_text">£{{product.new_price}}</span> <del class="old_price"> was £{{product.old_price}}</del></div>
+				</div>
+				<div class="result_details list" style="width:166px;">
+					<span style="display:block; padding-bottom:5px;"><span class="sosa-tag icon"></span> save <span style="color:#5284BF">£{{product.price_off}} </span></span>
+					<span style="display:block;padding-bottom:5px;"><span class="sosa-tag icon"></span> <span style="color:#5284BF">{{product.percent_off}}% </span>off </span>
+					<span style="display:block;padding-bottom:5px;"><span class="sosa-tag icon"></span> <span style="color:#5284BF">{{product.retailer}} </span> </span>
+				</div>
+				<div class="result_details" style="padding-top:40px;padding-left: 40px;">
+					
+				<span style="display:block;padding-top:28px;"> <a class="pure-button" style="background: #5284BF; color:#fff;font-weight:400;" href="{{product.link_url}}">view</a></span>
+				<!-- <span style="display:block;"> <a class="pure-button" style="background: #5284BF; color:#fff;font-weight:400;" href="#">save </a></span> -->
+				</div>
+				
+			</div>
+			  </li>
+			
+		</div><!--controller end -->
+		
+			
+	
+	</div>
+</div>

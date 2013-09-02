@@ -1,5 +1,5 @@
 /* Modules */
-var app = angular.module('myOfferFeed',['myOfferFeedDeps','ngCookies']);
+var app = angular.module('myOfferFeed',['myOfferFeedDeps','ngCookies', 'infinite-scroll']);
 
 var myOfferFeedDeps = angular.module('myOfferFeedDeps',['controllers', 'directives', 'services']);
 

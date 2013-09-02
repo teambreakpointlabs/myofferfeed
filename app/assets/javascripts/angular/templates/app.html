@@ -1,7 +1,7 @@
 <div class="divide"></div>
 <div class="row-wrapper-blue">
   <div class="row">
-	  <div class="small-12 columns">
+	  <div class="small-6 columns">
       <div class="header-text">
 		    <span class="sosa-tv header-icon"></span>
 			  <div>
@@ -9,10 +9,27 @@
 			    <span class="header-search-name">default</span>
 			  </div>
 	    </div>
-			<div class="header-buttons">
-				<a class="pure-button pure-button-search">Save</a>
-				<a class="pure-button pure-button-search">Edit</a>
-			</div>
+	</div>
+	<div class="small-6 columns">
+	     <div class="header-text" style="float:right; padding-right:10%;padding-top:8px;">
+		    <span class="sosa-folder header-icon" style="color:white;"></span>
+		    <li class="dropdown" ng-controller="SortProductsCtrl">
+			  <a class="dropdown-toggle">
+			    <span class="header-product">sorted by</span>
+			    <span class="header-search-name">{{productService.order}} <span class="sosa-down_alt" </span></span>
+			  </a>
+ 		 	<ul class="dropdown-menu">
+	    		<li ng-repeat="order in items">
+	      		  <a ng-click="setOrder(order[0])" style="background:blue;">{{order[1]}}</a>
+	    		</li>
+  			</ul>
+		</li>
+	    </div>
+			<!-- <div class="header-buttons"> -->
+			
+			    <!-- <span class="header-search-name">price</span> -->
+				<!-- <a class="pure-button pure-button-search">Edit</a>  -->
+			<!-- </div> -->
 	  </div>
 	</div>
 </div>
@@ -24,15 +41,15 @@
 </div> -->
 	<div ng-controller="SearchProductsCtrl">
 			<div television-search-filter></div>
-			{{productsFound}}
 	  <div class="results-container">
 	  	  <div style="padding-top:40px;text-align:center;font-family:'Open Sans'; font-size:22px; color: #4e81c2;" ng-show="products.length==0">
 		  	No Products Found
 		  </div>
-	    <li ng-repeat="product in products | limitTo:productsDisplayed">
+	    <li ng-repeat="product in products | limitTo:productsDisplayed | orderBy: productService.order">
 			  <div class="row result-individual" ng-click="displayProduct(product)">
 				  <div class="large-4 columns">
 				  	<div>
+				  		
 				  		<!-- <a href="http://test.skimlinks.com">SKIMLINKS</a> -->
 				  	</div>
 
@@ -74,7 +91,7 @@
 	</div>
 </div>
 <div class="footer">
-	<div class="logo">
+	<!-- <div class="logo">
 		my offer feed
-	</div>
+	</div> -->
 </div>

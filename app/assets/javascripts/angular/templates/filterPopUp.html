@@ -1,11 +1,11 @@
 <div ng-show="currentSearch.modal == 'price'">
 <div class="row">
 <div class="modal-header" style="text-align:center;">
-<h1 style="color: #25a9df;">Price</h1>
+<h1 style="color: #5284BF;">Price</h1>
 </div>
 <div class="large-5 columns" style="padding-top: 10px;">
-	<h4 style="color: #25a9df;  font-family: 'Open Sans';"> Min </h4>
-  	<select ng-model="currentSearch.price_min" style="font-family: 'Open Sans'; font-size: 20px; color: #25a9df;">
+	<h4 style="color: #5284BF;  font-family: 'Open Sans';"> Min </h4>
+  	<select ng-model="currentSearch.price_min" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
   		<option>0</option>
   		<option>100</option>
   		<option>200</option>
@@ -19,12 +19,20 @@
       <option>800</option>
       <option>900</option>
       <option>1000</option>
+      <option>1250</option>
+      <option>1500</option>
+      <option>2000</option>
+      <option>3000</option>
+      <option>5000</option>
     </select>
 </div>
 <div class="large-5 columns" style="padding-top: 10px;">
-  <h4 style="color: #25a9df; font-family: 'Open Sans';"> Max </h4>
-    <select ng-model="currentSearch.price_max" style="font-family: 'Open Sans'; font-size: 20px; color: #25a9df;">
-  		<option>300</option>
+  <h4 style="color: #5284BF; font-family: 'Open Sans';"> Max </h4>
+    <select ng-model="currentSearch.price_max" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
+  		
+      <option>100</option>
+      <option>200</option>
+      <option>300</option>
       <option>350</option>
       <option>400</option>
   		<option>450</option>
@@ -43,6 +51,8 @@
       <option>2000</option>
       <option>2500</option>
       <option>3000</option>
+      <option>5000</option>
+      <option>no max</option>
     </select>
 </div>
  </div>
@@ -50,27 +60,12 @@
 <div ng-show="currentSearch.modal == 'screen'">
  <div class="row">
 <div class="modal-header" style="text-align:center;">
-<h1 style="color: #25a9df;">Screen Size</h1>
+<h1 style="color: #5284BF;">Screen Size</h1>
 </div>
 <div class="large-5 columns" style="padding-top: 10px;">
-  <h4 style="color: #25a9df;  font-family: 'Open Sans';"> Min </h4>
-    <select ng-model="currentSearch.screen_min" style="font-family: 'Open Sans'; font-size: 20px; color: #25a9df;">
+  <h4 style="color: #5284BF;  font-family: 'Open Sans';"> Min </h4>
+    <select ng-model="currentSearch.screen_min" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
       <option>0</option>
-      <option>18</option>
-      <option>21</option>
-      <option>24</option>
-      <option>27</option>
-      <option>32</option>
-      <option>35</option>
-      <option>37</option>
-      <option>40</option>
-      <option>44</option>
-      <option>50</option>
-    </select>
-</div>
-<div class="large-5 columns" style="padding-top: 10px;">
-  <h4 style="color: #25a9df; font-family: 'Open Sans';"> Max </h4>
-    <select ng-model="currentSearch.screen_max" style="font-family: 'Open Sans'; font-size: 20px; color: #25a9df;">
       <option>18</option>
       <option>21</option>
       <option>24</option>
@@ -85,21 +80,52 @@
       <option>70</option>
     </select>
 </div>
+<div class="large-5 columns" style="padding-top: 10px;">
+  <h4 style="color: #5284BF; font-family: 'Open Sans';"> Max </h4>
+    <select ng-model="currentSearch.screen_max" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
+      <option>18</option>
+      <option>21</option>
+      <option>24</option>
+      <option>27</option>
+      <option>32</option>
+      <option>35</option>
+      <option>37</option>
+      <option>40</option>
+      <option>44</option>
+      <option>50</option>
+      <option>60</option>
+      <option>70</option>
+      <option>80</option>
+      <option>90</option>
+      <option>no max</option>
+    </select>
+</div>
  </div>
 </div>
 <div ng-show="currentSearch.modal == 'make'">
 <div class="row">
   <div class="large-10 large-centered columns">
 <div class="modal-header" style="text-align:center;">
-<h1 style="color: #25a9df;">Make</h1>
+<h1 style="color: #5284BF;">Make</h1>
 </div>
  
-  <select ng-model="currentSearch.makes[0]" style="font-family: 'Open Sans'; font-size: 20px; color: #25a9df;">
+  <select ng-model="currentSearch.makes[0]" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
     <option>all</option>
-    <option>SAMSUNG</option>
-    <option>PANASONIC</option>
-    <option>SONY</option>
+    <option>Bush</option>
+    <option>Digihome</option>
+    <option>Sharp</option>
+    <option>Polaroid</option>
+    <option>Philips</option>
+    <option>Sandstrom</option>
+    <option>Mitsubishi</option>
+    <option>Techika</option>
+    <option>Hitachi</option>
     <option>LG</option>
+    <option>Logik</option>
+    <option>Panasonic</option>
+    <option>Samsung</option>
+    <option>Sony</option>
+    <option>Toshiba</option>
   </select>
 </div>
 </div>
@@ -108,19 +134,24 @@
 <div class="row">
   <div class="large-10 large-centered columns">
 <div class="modal-header" style="text-align:center;">
-<h1 style="color: #25a9df;">Retailer</h1>
+<h1 style="color: #5284BF;">Retailer</h1>
 </div>
  
-  <select ng-model="currentSearch.retailers[0]" style="font-family: 'Open Sans'; font-size: 20px; color: #25a9df;">
+  <select ng-model="currentSearch.retailers[0]" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
     <option>all</option>
+    <option>Asda</option>
+    <option>Argos</option>
+    <option>COOP</option>
     <option>Currys</option>
+    <option>John Lewis</option>
+    <option>Tesco</option>
   </select>
 </div>
 </div>
 </div>
  <div class="row">
   <div class="large-12 columns" style="padding: 20px;">
-<button class="pure-button pure-button-filter" ng-click="close()" style="width: 100%;"> Confirm </button>
+<button class="pure-button pure-button-filter" style="background: #5284BF;" ng-click="close()" style="width: 100%;"> Confirm </button>
 </div>
 </div>
 
