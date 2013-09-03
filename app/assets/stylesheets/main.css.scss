@@ -51,7 +51,7 @@ $input-selected-background-color: #444444;
 }
 .coming-soon-text{
   font-size: 28px;
-  color: #fff;  
+  color: #4e81c2;  
   font-family: 'Open Sans', sans-serif;
 }
 .signup-input{
@@ -97,6 +97,10 @@ body{
   padding: 0;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+.wrapper{
+  background-color: #1e81c2;
 }
 
 a{
@@ -169,7 +173,7 @@ a{
 }
 
 .products-container{
-  padding-top:60px; 
+  padding-top:80px; 
   padding-bottom:40px;
 }
 
@@ -196,11 +200,11 @@ a{
       color: #fff;
     }
 
-    &:hover{
+  &:hover{
       background-color: #4e81c2;
       color: #343434;
 
-      .coming-soon{
+      /**  .coming-soon{
         display: block;
         color: #afafaf;
       }
@@ -208,7 +212,7 @@ a{
       .tagline{
         display: block;
         color: #afafaf;
-      }
+      }**/
    }
 }
 
@@ -320,32 +324,74 @@ li{
   padding-top:10px;
 }
 
+.container{
+  width:980px;
+  margin: 0 auto;
+  border:1px solid black;
+  height: 500px;
+  padding-top:50px;
+  .products{
+    border:1px solid green;
+    height:440px;
+  }
+}
+
 @media only screen and (max-width: 999px) and (min-width: 768px){
   
+  .container{
+    border:1px solid black;
+    width: 740px;
+    height: 500px;
+    padding-top:50px;
+     .products{
+    border:1px solid green;
+    height:440px;
+  }
+   }
   .filter-container{
     padding-top:20px;
-    display:block !important;
+    /**display:block !important;**/
+    display:none;
+  }
+    .product-type-container{
+   display:none;
   }
     
   .header-buttons{
     padding-top: 25px;
     padding-bottom:5px;
   }
+ 
+  
 
   .result-individual{
     text-align:center;
   }
+
 }
 
 @media only screen and (max-width: 767px){
-
+  .container{
+  border:1px solid black;
+    width:100%;
+    padding-top:50px;
+    height: 500px;
+     .products{
+    border:1px solid green;
+    height:440px;
+  }
+  }
   .result-individual{
     text-align:center;
   }
 
-  .filter-container{
-    display:block !important;
+   .filter-container{
     padding-top:20px;
+    /**display:block !important;**/
+    display:none;
+  }
+    .product-type-container{
+   display:none;
   }
   
   .header-buttons{

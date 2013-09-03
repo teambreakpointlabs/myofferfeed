@@ -1,0 +1,33 @@
+<div class="topbar">
+	<div class="title">
+		special offer shopper
+	</div>
+</div>
+<div ng-controller="SearchProductsCtrl">
+<div class="container">
+	<div class="products">
+		 <li ng-repeat="product in products | orderBy: productService.order">
+			  	<div class="result"  style="height:180px;">
+				<span class="result_image" style="" >
+					<img style="padding-top:10px;image-size:100%;width:200px;" src="{{product.image_url}}"></img>
+				</span>
+				<div class="result_details" style="width:260px;">
+					<span class="product_title">{{product.make}} {{product.properties.screen_size}}" {{product.properties.tv_type}} </span>
+<div class="price"><span class="sosa-tags icon"></span><span class="price_text">£{{product.new_price}}</span> <del class="old_price"> was £{{product.old_price}}</del></div>
+				</div>
+				<div class="result_details list" style="width:166px;">
+					<span style="display:block; padding-bottom:5px;"><span class="sosa-tag icon"></span> save <span style="color:#5284BF">£{{product.price_off}} </span></span>
+					<span style="display:block;padding-bottom:5px;"><span class="sosa-tag icon"></span> <span style="color:#5284BF">{{product.percent_off}}% </span>off </span>
+					<span style="display:block;padding-bottom:5px;"><span class="sosa-tag icon"></span> <span style="color:#5284BF">{{product.retailer}} </span> </span>
+				</div>
+				<div class="result_details" style="padding-top:40px;padding-left: 40px;">
+					
+				<span style="display:block;padding-top:28px;"> <a class="pure-button" style="background: #5284BF; color:#fff;font-weight:400;" href="{{product.link_url}}">view</a></span>
+				<!-- <span style="display:block;"> <a class="pure-button" style="background: #5284BF; color:#fff;font-weight:400;" href="#">save </a></span> -->
+				</div>
+				
+			</div>
+			  </li>
+	</div>
+</div>
+</div>

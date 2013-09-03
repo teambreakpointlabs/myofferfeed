@@ -295,4 +295,16 @@ img{
 	padding:5px;margin-left:5px;padding-right:5px;
 	color:#5284BF;
 }
+@media only screen and (max-width: 999px) and (min-width: 768px){
+.main_section{
+    position:fixed;
+    left:5px;
+}
+}
+@media only screen and (max-width: 767px){
+.main_section{
+    position:fixed;
+    left:5px;
+}
+}
 
