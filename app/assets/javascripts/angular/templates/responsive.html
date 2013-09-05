@@ -4,30 +4,83 @@
 	</div>
 </div>
 <div ng-controller="SearchProductsCtrl">
+<div class="row mobile">
+		<div class="dropdown" style="color: #5284BF;text-align:right; padding-top:14px;padding-right:10px;">
+			filter results <span class="sosa-down_alt" style="padding-top:2px;"></span>
+		</div>
+</div>
+
 <div class="container">
 	<div class="products">
 		 <li ng-repeat="product in products | orderBy: productService.order">
+			  	<div class="row">
+
 			  	<div class="result"  style="height:180px;">
-				<span class="result_image" style="" >
+				<div class="large-3 columns">
+				<span class="result_image">
 					<img style="padding-top:10px;image-size:100%;width:200px;" src="{{product.image_url}}"></img>
 				</span>
-				<div class="result_details" style="width:260px;">
-					<span class="product_title">{{product.make}} {{product.properties.screen_size}}" {{product.properties.tv_type}} </span>
-<div class="price"><span class="sosa-tags icon"></span><span class="price_text">£{{product.new_price}}</span> <del class="old_price"> was £{{product.old_price}}</del></div>
+			    </div>
+			    <div class="large-3 columns second_column">
+				<div class="result_details" style="">
+					<span class="product_title" style="color:#5284BF;font-size:25px;">{{product.make}} {{product.properties.screen_size}}" {{product.properties.tv_type}} </span>
+<div class="price"><span class="sosa-tags icon"></span><span class="price_text" style="color:#5284BF;font-size:25px;">£{{product.new_price}}</span> <del class="old_price"> was £{{product.old_price}}</del></div>
 				</div>
-				<div class="result_details list" style="width:166px;">
+			</div>
+			<div class="large-3 columns third_column">
+				<div class="result_details list" style="padding-left:5px;">
 					<span style="display:block; padding-bottom:5px;"><span class="sosa-tag icon"></span> save <span style="color:#5284BF">£{{product.price_off}} </span></span>
 					<span style="display:block;padding-bottom:5px;"><span class="sosa-tag icon"></span> <span style="color:#5284BF">{{product.percent_off}}% </span>off </span>
 					<span style="display:block;padding-bottom:5px;"><span class="sosa-tag icon"></span> <span style="color:#5284BF">{{product.retailer}} </span> </span>
 				</div>
-				<div class="result_details" style="padding-top:40px;padding-left: 40px;">
+								</div>
+<div class="large-3 columns">
+				<div class="result_details">
 					
-				<span style="display:block;padding-top:28px;"> <a class="pure-button" style="background: #5284BF; color:#fff;font-weight:400;" href="{{product.link_url}}">view</a></span>
+				<span style=""> <a class="pure-button" style="background: #5284BF; color:#fff;font-weight:400;" href="{{product.link_url}}">view</a></span>
 				<!-- <span style="display:block;"> <a class="pure-button" style="background: #5284BF; color:#fff;font-weight:400;" href="#">save </a></span> -->
 				</div>
-				
+			</div>
 			</div>
 			  </li>
 	</div>
 </div>
+<div class="left_container">
+		<div class="row">
+		<div class="large-12 columns" style="padding-top:50px;">
+
+<div class="bubble_res" style="width:100%; margin-top:10px;">
+	<div class="section_title" >
+		product type <!-- <span class="sosa-down_alt"></span> -->
+	</div>
+	<div class="product_section"  style="width:100%">
+	 <span class="sosa-tv icon"> <span class="product">television</span> </span>
+	</div>
+</div>
+<div class="bubble_res" style="height:380px; margin-top:10px; width:100%;">
+	<div class="section_title" style="">
+		filter by
+	</div>
+		<div search-filter type="price" search="currentSearch" filter="filter(type)"></div>
+		<div search-filter type="make" search="currentSearch" filter="filter(type)"></div>
+		<div search-filter type="retailer" search="currentSearch" filter="filter(type)"></div>
+		<div search-filter type="screen" search="currentSearch" filter="filter(type)"></div>
+	
+	<div class="section_title" style="">
+		search options
+	</div>
+	<div>
+		<div class="pure-button" style="color:#343434 !important;margin-bottom:10px;font-weight:400 !important;font-family:'Open Sans',background: #f6f6f6 !important; margin-top:5px;" disabled><!-- save search -->Coming Soon</div>
+		<!-- <a class="pure-button" style="color:#343434 !important;font-weight:400 !important;font-family:'Open Sans', background: #f6f6f6 !important;" href="#"> view saved</a> -->
+	</div>
+</div>
+
+
+
+
+
+</div>
+		</div>
+	</div>
+	</div>
 </div>

@@ -1,0 +1,130 @@
+.bubble_res {
+    font-family: 'Open Sans';
+    color: #343434;
+    font-weight:300;
+    font-size: 18px;
+    background-color: #fff;
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 5px;
+    padding-top:10px;
+    padding-bottom:24px;
+    width:25%;
+
+    .section_title{
+      padding-bottom:12px;
+      color: #5284BF;
+      font-weight:400;
+      font-size:22px;
+      padding-top: 12px;
+      border-top: 1px solid #f6f6f6;
+      border-bottom: 1px solid #f6f6f6;
+      margin-bottom:12px;
+      margin-top:5px;
+    }
+    .product_section{
+        padding:5px;
+        padding-left:0px;
+        font-size:18px;
+        color: #343434;
+        font-weight:400;
+        background: #F6F6F6;
+        border-radius: 5px;
+        text-align:center;
+        .product{
+          color:#343434;
+          font-size:18px;
+          &:hover{
+          	background:none;
+          }
+        }
+    }
+}
+.filter_section_res{
+    padding: 12px;
+    cursor:pointer;
+    color:#5284BF;
+}
+.filter_content_res{
+
+    background: #f6f6f6;
+    border-radius: 5px;
+    padding:5px;
+    padding-left: 10px;
+    padding-right:10px;
+    postion: relative;
+    font-weight:400;
+}
+.filter_content_make_res{
+
+    background: #f6f6f6;
+    border-radius: 5px;
+    padding:5px;
+    padding-left: 10px;
+    padding-right:10px;
+    postion: relative;
+    font-weight:400;
+    width:100%;
+    text-align:center;
+}
+
+.filter_content_retailer_res{
+
+    background: #f6f6f6;
+    border-radius: 5px;
+    padding:5px;
+    padding-left: 10px;
+    padding-right:10px;
+    postion: relative;
+    font-weight:400 !important;
+}
+.filter_content_screen_res{
+
+    background: #f6f6f6;
+    border-radius: 5px;
+    padding:5px;
+    padding-left: 10px;
+    padding-right:10px;
+    postion: relative;
+    font-weight:400;
+}
+.filter_title_res{
+ 
+ padding-right: 10px;
+ color:#5284BF;
+ font-weight:400;
+    
+}
+
+.mobile{
+  display:none;
+
+}
+.dropdown{
+  height:40px; 
+  background: blue; 
+  color: white;
+}
+@media only screen and (max-width: 999px) and (min-width: 768px){
+.mobile{
+  display:block;
+  padding-top:50px;
+}
+.dropdown{
+  height:40px; 
+  background: #fff; 
+  color: white;
+}
+}
+@media only screen and (max-width: 767px){
+.mobile{
+  display:block;
+  padding-top:50px;
+}
+.dropdown{
+  height:40px; 
+  background: #fff; 
+  color: white;
+}
+}
+

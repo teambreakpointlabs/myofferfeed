@@ -1,22 +1,22 @@
-<div class="filter_section" ng-click="filter({type:filter_title})">
+<div class="filter_section_res" ng-click="filter({type:filter_title})">
     <div ng-show="filter_title=='price'">
-		<span class="filter_title"> price </span>
-		<span class="filter_content"> {{search.price_min}} - {{search.price_max}} </span>
-		<span class="sosa-down_alt arrow"></span>
+		<span class="filter_title_res"> price </span>
+		<span class="filter_content_res"> {{search.price_min}} - {{search.price_max}} </span>
+		<!-- <span class="sosa-down_alt arrow"></span> -->
 	</div>
 	 <div ng-show="filter_title=='make'">
-<span class="filter_title"> make </span>
-		<span class="filter_content_make"> {{search.makes[0]}} </span>
-		<span class="sosa-down_alt arrow"></span>
+<span class="filter_title_res"> make </span>
+		<span class="filter_content_make_res"> {{search.makes[0]}} </span>
+		<!-- <span class="sosa-down_alt arrow"></span> -->
 	</div>
 	 <div ng-show="filter_title=='retailer'">
-		<span class="filter_title"> retailer </span>
-		<span class="filter_content_retailer"> {{search.retailers[0]}} </span>
-		<span class="sosa-down_alt arrow"></span>
+		<span class="filter_title_res"> retailer </span>
+		<span class="filter_content_retailer_res"> {{search.retailers[0]}} </span>
+		<!-- <span class="sosa-down_alt arrow"></span> -->
 	</div>
 	 <div ng-show="filter_title=='screen'">
-			<span class="filter_title"> screen </span>
-		<span class="filter_content_screen"> {{search.screen_min}} - {{search.screen_max}} </span>
-		<span class="sosa-down_alt arrow"></span>
+			<span class="filter_title_res"> screen </span>
+		<span class="filter_content_screen_res"> {{search.screen_min}} - {{search.screen_max}} </span>
+		<!-- <span class="sosa-down_alt arrow"></span> -->
 	</div>
 </div>

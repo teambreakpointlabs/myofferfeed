@@ -261,11 +261,12 @@ display:inline-block;float:right;font-family: 'Open Sans';font-size: 18px; font-
     vertical-align: middle;
     font-family: 'Open Sans';
     vertical-align:top; display:inline-block;height:100%;padding-top:50px;padding-left:20px;
+    
     .product_title{
     color:#5284BF; font-size: 25px;
     }
     .price{
-    padding-top:10px;
+    padding-top:5px;
     .price_text{
     color:#5284BF; font-size: 28px;
     }
@@ -280,9 +281,30 @@ display:inline-block;float:right;font-family: 'Open Sans';font-size: 18px; font-
     }
     }
 }
+   .price{
+    padding-top:5px;
+    }
 img{
 	height:100%;
 }
+.result{
+    border-top: 1px dashed #d5e1ef;
+    height: 180px;
+    vertical-align: middle;
+    .result_image{
+    padding-left:10px;
+    padding-right:10px;
+    }
+    }
+ .price_text{
+    color:#5284BF; font-size: 28px;
+    padding-top:5px;
+    }
+      .old_price{
+ padding-top:5px;
+     font-weight:300;
+     color:#afafaf;
+    }
 .icon{
 	color:#afafaf;font-size:28px;padding-right:5px;
 }
@@ -300,11 +322,18 @@ img{
     position:fixed;
     left:5px;
 }
+
 }
 @media only screen and (max-width: 767px){
 .main_section{
     position:fixed;
     left:5px;
 }
+.main_section_results{
+.result_details{
+    padding-top:5px;
+}
+}
+
 }
 
