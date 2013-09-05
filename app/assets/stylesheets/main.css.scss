@@ -334,6 +334,7 @@ li{
     background: #fff;
     height:540px;
      overflow:scroll;
+     -webkit-overflow-scrolling: touch;
      margin: 5px;
   }
   .second_column{
@@ -363,7 +364,7 @@ li{
    margin-top:5px;
    padding-top:0px;
      .products{
-
+ -webkit-overflow-scrolling: touch;
     background: #fff;
     height:540px;
     overflow:scroll;
@@ -423,6 +424,7 @@ li{
     overflow: scroll;
     height:540px;
      text-align:center;
+      -webkit-overflow-scrolling: touch;
   }
   }
   .result-individual{

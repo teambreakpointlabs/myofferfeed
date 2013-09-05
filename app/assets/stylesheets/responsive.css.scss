@@ -98,12 +98,14 @@
 
 .mobile{
   display:none;
-
 }
 .dropdown{
   height:40px; 
   background: blue; 
   color: white;
+}
+.filter_dropdown{
+  display:none;
 }
 @media only screen and (max-width: 999px) and (min-width: 768px){
 .mobile{
@@ -115,6 +117,9 @@
   background: #fff; 
   color: white;
 }
+.filter_dropdown{
+  display:none;
+}
 }
 @media only screen and (max-width: 767px){
 .mobile{
@@ -125,6 +130,9 @@
   height:40px; 
   background: #fff; 
   color: white;
+}
+.filter_dropdown{
+  display:none;
 }
 }
 

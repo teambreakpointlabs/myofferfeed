@@ -5,8 +5,14 @@
 </div>
 <div ng-controller="SearchProductsCtrl">
 <div class="row mobile">
-		<div class="dropdown" style="color: #5284BF;text-align:right; padding-top:14px;padding-right:10px;">
+		<div class="dropdown" style="color: #5284BF;text-align:right; padding-top:14px;padding-right:10px;" ng-click="displayFilter();">
 			filter results <span class="sosa-down_alt" style="padding-top:2px;"></span>
+		</div>
+		<div class="filter_dropdown" ng-show="{{filter}}">
+		<div search-filter type="price" search="currentSearch" filter="filter(type)"></div>
+		<div search-filter type="make" search="currentSearch" filter="filter(type)"></div>
+		<div search-filter type="retailer" search="currentSearch" filter="filter(type)"></div>
+		<div search-filter type="screen" search="currentSearch" filter="filter(type)"></div>
 		</div>
 </div>
 

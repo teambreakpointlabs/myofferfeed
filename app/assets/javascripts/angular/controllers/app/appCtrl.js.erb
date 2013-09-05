@@ -7,7 +7,7 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 	console.log('order =' + $scope.productService.order);
 	$scope.searchService = SearchService;
 	$scope.currentSearch = SearchService.currentSearch;
-
+    $scope.filter = false;
 	// if ($cookieStore.get('currentSearch')==null){
 	// 	$location.path("/home");
 	// }
@@ -27,7 +27,11 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 		$scope.productsDisplayed += 6;
 		AffiliateService.applyAffiliateLinks();
 	}
-    
+
+	$scope.displayFilter = function(){
+		console.log('show filter');
+		$scope.filter = !$scope.filter;
+	}    
 	$scope.displayProduct = function(product){
 		var dialogOpts = {
 			resolve: {
