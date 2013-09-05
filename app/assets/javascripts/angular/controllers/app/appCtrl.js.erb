@@ -7,7 +7,7 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 	console.log('order =' + $scope.productService.order);
 	$scope.searchService = SearchService;
 	$scope.currentSearch = SearchService.currentSearch;
-    $scope.filter = false;
+    $scope.filter_drop = false;
 	// if ($cookieStore.get('currentSearch')==null){
 	// 	$location.path("/home");
 	// }
@@ -30,7 +30,8 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 
 	$scope.displayFilter = function(){
 		console.log('show filter');
-		$scope.filter = !$scope.filter;
+		$scope.filter_drop = !$scope.filter_drop;
+		console.log($scope.filter);
 	}    
 	$scope.displayProduct = function(product){
 		var dialogOpts = {
