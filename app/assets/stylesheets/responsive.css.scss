@@ -101,7 +101,6 @@
 }
 .dropdown{
   height:40px; 
-  background: blue; 
   color: white;
 }
 .filter_dropdown{
@@ -111,14 +110,14 @@
 .mobile{
   display:block;
   padding-top:50px;
+  border-bottom: 5px solid #fff;
 }
 .dropdown{
   height:40px; 
-  background: #fff; 
   color: white;
 }
 .filter_dropdown{
-
+  
 }
 }
 @media only screen and (max-width: 767px){
@@ -128,7 +127,6 @@
 }
 .dropdown{
   height:40px; 
-  background: #fff; 
   color: white;
 }
 .filter_dropdown{
