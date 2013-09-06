@@ -55,7 +55,10 @@
 	
 	
 	<div class="products">
-		 <li ng-repeat="product in products | orderBy: productService.order">
+		 <div style="padding-top:40px;text-align:center;font-family:'Open Sans'; font-size:22px; color: #4e81c2;" ng-show="products.length==0">
+		  	No Results Found
+		  </div>
+		 <li ng-repeat="product in products | orderBy: productService.order | limitTo:productsDisplayed ">
 			  	<div class="row">
 
 			  	<div class="result"  style="height:180px;">
@@ -86,6 +89,9 @@
 			</div>
 			</div>
 			  </li>
+			   <button class="pure-button" style="width:100%; color:#5284BF; " ng-click="showMore()" ng-show="products.length>0 && productsDisplayed <= products.length">
+		  	show more results
+		  </button>
 	</div>
 </div>
 <div class="left_container">

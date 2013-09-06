@@ -24,7 +24,7 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 	}
 
 	$scope.showMore = function(){
-		$scope.productsDisplayed += 6;
+		$scope.productsDisplayed += 10;
 		AffiliateService.applyAffiliateLinks();
 	}
 
@@ -74,7 +74,7 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 		var dialog = $dialog.dialog(opts);
 		dialog.open('<%= asset_path('angular/templates/filterPopUp.html') %>');
 
-
+		$scope.productsDisplayed = 10;
 	}
 }])
 .controller('AttributeCtrl', ['$scope', '$dialog','FilterDataService', function($scope, $dialog, FilterDataService){
