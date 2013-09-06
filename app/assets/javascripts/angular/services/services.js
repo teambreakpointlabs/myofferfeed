@@ -16,7 +16,7 @@ services
 }])
 .factory('ProductService',['Product','SearchService', function(Product, SearchService){
 	var products = [];
-	var productsDisplayed = 6;
+	var productsDisplayed = 10;
 	var order = ['new_price','price'];
 
 	function meetsCriteria(product, currentSearch){
