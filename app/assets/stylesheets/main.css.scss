@@ -154,7 +154,7 @@ a{
 
 }
 
-.footer{
+/**.footer{
   height:50px; 
   border-top:4px solid #25a9df;
 
@@ -166,7 +166,7 @@ a{
     margin-top:15px;
     margin-bottom:15px;
   }
-}
+}**/
 
 .index-content{
   background-color: #1e81c2;
@@ -329,7 +329,6 @@ li{
   float:right;
   height: 600px;
   padding-top:50px;
-  margin-top:5px;
   .products{
     background: #fff;
     height:540px;
@@ -362,7 +361,6 @@ li{
   .container{
     width: 100%;
     height: 600px;
-   margin-top:5px;
    padding-top:0px;
      .products{
  -webkit-overflow-scrolling: touch;
@@ -410,9 +408,7 @@ li{
   }
   .container{
     width:100%;
-    float:clear;
     margin: auto 0;
-    margin-top:5px;
     height: 500px;
     padding-top:0px;
   .second_column{

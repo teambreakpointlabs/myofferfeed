@@ -7,11 +7,11 @@ body{
     top:0;
     left:0;
     width:100%;
-    height: 50px;
+    height: 42px;
     background:#5284BF;
     box-shadow: 1px 1px 1px #afafaf;
     .title{
-        font-size:28px;
+        font-size:20px;
         font-weight:400;
         font-family: 'Open Sans';
         color: #fff;
@@ -288,7 +288,7 @@ img{
 	height:100%;
 }
 .result{
-    border-top: 1px dashed #d5e1ef;
+    border-top: 1px solid #d5e1ef;
     height: 180px;
     vertical-align: middle;
     .result_image{
