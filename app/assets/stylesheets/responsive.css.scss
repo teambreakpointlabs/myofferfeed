@@ -137,8 +137,17 @@
 .mobile{
   display:block;
 }
+.fixed{
+  position:fixed;
+  top:45px;
+}
 .mobile-hide{
   display:none;
+}
+.header-fixed{
+  position: fixed;
+  top:0;
+  width:100%;
 }
 .dropdown{
   height:40px; 
@@ -149,6 +158,9 @@
 }
 .filter_dropdown{
 
+}
+.top-bar .name h1 a{
+  width:60%;
 }
 }
 
