@@ -91,7 +91,8 @@ $input-selected-background-color: #444444;
 }
 
 body{
-  background-color: #1e81c2;
+ 
+  background:url('background.JPG');
   width: 100%;
   margin: 0;
   padding: 0;
@@ -139,17 +140,16 @@ a{
 }
 
 .title-content{
-  background-color: #1e81c2;
+  color:#1e81c2;
   font-family: 'Open Sans', sans-serif !important;
   text-align: center;
   font-size: 60px;
-  color: #fff;
+
   margin-top: 80px;
   
   .title-tagline{
     padding-top: 15px;
     font-size: 24px;
-    color: #f6f6f6;
   }
 
 }
@@ -173,8 +173,7 @@ a{
 }
 
 .products-container{
-  padding-top:80px; 
-  padding-bottom:40px;
+  padding-top:60px; 
 }
 
 .product{
@@ -182,8 +181,9 @@ a{
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
-  color: #fff;
+  color: #1e81c2;
   cursor: pointer;
+
   
   @include border-radius(5px);
     
