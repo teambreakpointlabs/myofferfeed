@@ -3,11 +3,6 @@
 app.config(['$routeProvider','$httpProvider',function($routeProvider, $httpProvider) {
   $routeProvider
     .when('/', {controller: 'SearchProductsCtrl', templateUrl: '<%= asset_path('angular/templates/index.html') %>'})
-    .when('/home', {templateUrl: '<%= asset_path('angular/templates/index.html') %>'})
-    // .when('/app', {templateUrl: '<%= asset_path('angular/templates/app.html') %>'})
-    .when('/other', {templateUrl: '<%= asset_path('angular/templates/other.html') %>'})
-    .when('/scroll',{templateUrl: '<%= asset_path('angular/templates/infiniteScroll.html')%>'})
-    .when('/redesign',{templateUrl: '<%= asset_path('angular/templates/appRedesign.html')%>'})
     .when('/app',{templateUrl: '<%= asset_path('angular/templates/responsive.html')%>'})
     .otherwise({redirectTo: '/'});
 
