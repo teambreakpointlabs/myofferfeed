@@ -23,7 +23,7 @@
 </nav>
 <div class="row mobile fixed">
 	<div class="filter_holder_mobile" style="margin-top: 8px;padding-left:5px;padding-right:5px;">
-<a class="dropdown-toggle"  style="margin-top:15px;"> 
+<a class="dropdown-toggle"> 
 		 
 		<div style="display:inline-block;">
 			
@@ -43,13 +43,16 @@
 		</li>
 
 		</div> </a>
-		<div class="dropdown" style="color: #5284BF;display:inline-block;float:right;" ng-click="displayFilter();">
+		<div class="dropdown" style="color: #5284BF;display:inline-block;float:right;padding:10px;" ng-click="displayFilter();" ng-show="!filter_drop">
 			filter results 
+		</div>
+	    <div class="dropdown" style="color: #5284BF;display:inline-block;float:right;padding:10px;" ng-click="filter_drop=false" ng-show="filter_drop">
+			hide filter
 		</div>
 
 		<div class="filter_dropdown" ng-show="filter_drop" style="margin-top: 10px;
 padding: 20px;
-border-top: 1px solid #d5e1ef;">
+border-top: 1px solid #d5e1ef;background:#f6f6f6;">
 
 		<div search-filter type="price" search="currentSearch" filter="filter(type)"></div>
 		<div search-filter type="make" search="currentSearch" filter="filter(type)"></div>
@@ -85,7 +88,7 @@ border-top: 1px solid #d5e1ef;">
 			  {{productService.order[1]}}<span class="sosa-down_alt" style="font-size:18px; color:#5284BF; padding-left:5px; "></span>
 			  </span>
 			
- 		 	<ul class="dropdown-menu" style="background: #5284BF;width:150px !important; margin-left:150px;">
+ 		 	<ul class="dropdown-menu" style="background: #5284BF;width:150px !important; margin-left:100px;">
 	    		<li ng-repeat="order in items" style="padding-bottom:5px;">
 	      		  <a ng-click="setOrder(order)" style="background:#5284BF;">{{order[1]}}</a>
 	    		</li>
