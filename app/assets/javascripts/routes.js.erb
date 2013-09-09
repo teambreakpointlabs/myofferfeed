@@ -3,7 +3,7 @@
 app.config(['$routeProvider','$httpProvider',function($routeProvider, $httpProvider) {
   $routeProvider
     .when('/', {controller: 'SearchProductsCtrl', templateUrl: '<%= asset_path('angular/templates/index.html') %>'})
-    .when('/app',{templateUrl: '<%= asset_path('angular/templates/responsive.html')%>'})
+    .when('/app',{controller: 'SearchProductsCtrl',templateUrl: '<%= asset_path('angular/templates/responsive.html')%>'})
     .otherwise({redirectTo: '/'});
 
     var numLoadings = 0;

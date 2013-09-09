@@ -8,9 +8,10 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 	$scope.searchService = SearchService;
 	$scope.currentSearch = SearchService.currentSearch;
     $scope.filter_drop = false;
-	// if ($cookieStore.get('currentSearch')==null){
-	// 	$location.path("/home");
-	// }
+    
+	 if ($cookieStore.get('currentSearch')==null){
+	 	$location.path("/");
+	 }
 
 	$scope.searchService.populateSearch();
 	$scope.productService.getProductsByCurrentSearch();
