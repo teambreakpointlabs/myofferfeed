@@ -19,7 +19,7 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
   
 	$scope.getProducts = function(productType){
 		$scope.searchService.saveInitialSearch(productType);
-		$location.path('/responsive');
+		$location.path('/app');
 		AffiliateService.applyAffiliateLinks();
 	}
 
