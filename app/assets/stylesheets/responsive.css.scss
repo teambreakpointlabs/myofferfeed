@@ -132,6 +132,10 @@
 .mobile-hide{
   display:none;
 }
+.fixed{
+  position:fixed;
+  top:45px;
+}
 }
 @media only screen and (max-width: 767px){
 .mobile{
@@ -149,6 +153,7 @@
   top:0;
   width:100%;
 }
+
 .dropdown{
   height:40px; 
   color: white;
@@ -160,7 +165,7 @@
 
 }
 .top-bar .name h1 a{
-  width:60%;
+  width:80%;
 }
 }
 
