@@ -1,151 +1,50 @@
-
 <div ng-controller="SearchProductsCtrl">
-<nav class="top-bar header-fixed" style="background: #5284BF; margin-bottom:0px;">
-  <ul class="title-area">
-    <!-- Title Area -->
-    <li class="name">
-      <h1><a href="#">special offer shopper </a></h1>
-    </li>
-    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> -->
-  </ul>
-
+  <nav class="top-bar header-fixed" style="background: #5284BF; margin-bottom:0px;">
+    <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+        <h1><a href="#">special offer shopper </a></h1>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> -->
+    </ul>
   <section class="top-bar-section">
-    <!-- Left Nav Section -->
-    <ul class="left">
-     
-    </ul>
-
-    <!-- Right Nav Section -->
-    <ul class="right">
-      
-    </ul>
   </section>
-</nav>
-<div class="row mobile fixed">
-	<div class="filter_holder_mobile" style="margin-top: 8px;padding-left:5px;padding-right:5px;">
-<a class="dropdown-toggle"> 
-		 
+  </nav>
+  <div class="row mobile fixed">
+	  <div class="filter_holder_mobile" style="margin-top: 8px;padding-left:5px;padding-right:5px;">
+    <a class="dropdown-toggle"> 
 		<div style="display:inline-block;">
-			
 			<li class="dropdown" ng-controller="SearchProductsCtrl">
-					<span style="color:#5284BF !important;">
-			sort by
-		</span>
-			  <span style="color:#5284BF !important;">
-			  {{productService.order[1]}}
+				<span style="color:#5284BF !important;">
+				sort by
 			  </span>
-			
- 		 	<ul class="dropdown-menu" style="background: #5284BF;width:150px !important;">
-	    		<li ng-repeat="order in items" style="padding-bottom:5px;">
-	      		  <a ng-click="setOrder(order)" style="background:#5284BF;">{{order[1]}}</a>
-	    		</li>
-  			</ul>
-		</li>
-
-		</div> </a>
+				<span style="color:#5284BF !important;">
+				{{productService.order[1]}}
+				</span>
+	 		 	<ul class="dropdown-menu" style="background: #5284BF;width:150px !important;">
+		      <li ng-repeat="order in items" style="padding-bottom:5px;">
+		      	<a ng-click="setOrder(order)" style="background:#5284BF;">{{order[1]}}</a>
+		    	</li>
+	  		</ul>
+		  </li>
+		</div> 
+	  </a>
 		<div class="dropdown" style="color: #5284BF;display:inline-block;float:right;padding:10px;" ng-click="displayFilter();" ng-show="!filter_drop">
 			filter results 
 		</div>
-	    <div class="dropdown" style="color: #5284BF;display:inline-block;float:right;padding:10px;" ng-click="filter_drop=false" ng-show="filter_drop">
+	  <div class="dropdown" style="color: #5284BF;display:inline-block;float:right;padding:10px;" ng-click="filter_drop=false" ng-show="filter_drop">
 			hide filter
 		</div>
-
-		<div class="filter_dropdown" ng-show="filter_drop" style="margin-top: 20px;
-padding: 20px;
-border-top: 1px solid #d5e1ef;background:#f6f6f6;">
-
-		<div search-filter type="price" search="currentSearch" filter="filter(type)"></div>
-		<div search-filter type="make" search="currentSearch" filter="filter(type)"></div>
-		<div search-filter type="retailer" search="currentSearch" filter="filter(type)"></div>
-		<div search-filter type="screen" search="currentSearch" filter="filter(type)"></div>
+		<div class="filter_dropdown" ng-show="filter_drop" style="margin-top: 20px; padding: 20px; border-top: 1px solid #d5e1ef;background:#f6f6f6;">
+			<div search-filter type="price" search="currentSearch" filter="filter(type)"></div>
+			<div search-filter type="make" search="currentSearch" filter="filter(type)"></div>
+			<div search-filter type="retailer" search="currentSearch" filter="filter(type)"></div>
+			<div search-filter type="screen" search="currentSearch" filter="filter(type)"></div>
 		</div>
-		</div>
-				
-</div>
-
-<div class="container">
-
-	<div class="row mobile-hide" style="background:#fff; margin-top:10px; border-radius:5px;">
-		<div class="small-4 columns">
-	<div class="" style="margin-top:10px;padding: 10px;margin-bottom:10px;width:100%;height:38px;color:#5284BF;font-size:18px; padding-bottom:5px; background: #f6f6f6; width:150px; border-radius:5px; border: 1px solid #d5e1ef;">
-			<i class="icon-ok" ng-show="products.length>0"></i>
-			<i class="icon-remove" ng-show="products.length==0" style=""></i>
-			{{products.length}} results
-		
-		</div>
-
-	</div>
-	<div class="small-5 small-offset-3 columns">
-		<a class="dropdown-toggle" style=""> 
-		 
-		<div style="display: inline-block; float:right; padding-bottom: 5px;margin-top:10px;padding: 10px;width:100%; text-align:right;height:25px;color:#5284BF;font-size:18px;">
-			
-			<li class="dropdown" ng-controller="SearchProductsCtrl">
-					<span style="color:#5284BF !important;">
-			sort by
-		</span>
-			  <span style="color:#5284BF !important;background:#f6f6f6; padding:10px; border-radius:5px; border: 1px solid #d5e1ef;">
-			  {{productService.order[1]}}<span class="sosa-down_alt" style="font-size:18px; color:#5284BF; padding-left:5px; "></span>
-			  </span>
-			
- 		 	<ul class="dropdown-menu" style="background: #5284BF;width:150px !important; margin-left:100px;">
-	    		<li ng-repeat="order in items" style="padding-bottom:5px;">
-	      		  <a ng-click="setOrder(order)" style="background:#5284BF;">{{order[1]}}</a>
-	    		</li>
-  			</ul>
-		</li>
-
-		</div> </a>
-	</div>
-	</div>
-	
-	
-	<div class="products">
-		 <div style="padding-top:40px;text-align:center;font-family:'Open Sans'; font-size:22px; color: #4e81c2;" ng-show="products.length==0">
-		  	No Results Found
-		  </div>
-		    <div infinite-scroll='showMore()' infinite-scroll-distance='2'>
-		 <li ng-repeat="product in products | orderBy: productService.order | limitTo:productsDisplayed ">
-			  	<div class="row">
-
-			  	<div class="result"  style="height:180px;">
-				<div class="large-3 columns">
-				<span class="result_image">
-					<img style="padding-top:10px;image-size:100%;width:200px;" src="{{product.image_url}}"></img>
-				</span>
-			    </div>
-			    <div class="large-3 columns second_column">
-				<div class="result_details" style="">
-					<span class="product_title" style="color:#5284BF;font-size:25px;">{{product.make}} {{product.properties.screen_size}}" {{product.properties.tv_type}} </span>
-<div class="price"><span class="sosa-tags icon"></span><span class="price_text" style="color:#5284BF;font-size:25px;">£{{product.new_price}}</span> <del class="old_price"> was £{{product.old_price}}</del></div>
-				</div>
-			</div>
-			<div class="large-3 columns third_column">
-				<div class="result_details list" style="padding-left:5px;">
-					<span style="display:block; padding-bottom:5px;"><span class="sosa-tag icon"></span> save <span style="color:#5284BF">£{{product.price_off}} </span></span>
-					<span style="display:block;padding-bottom:5px;"><span class="sosa-tag icon"></span> <span style="color:#5284BF">{{product.percent_off}}% </span>off </span>
-					<span style="display:block;padding-bottom:5px;"><span class="sosa-tag icon"></span> <span style="color:#5284BF">{{product.retailer}} </span> </span>
-				</div>
-								</div>
-<div class="large-3 columns">
-				<div class="result_details">
-					
-				<span style=""> <a class="pure-button" style="background: #5284BF; color:#fff;font-weight:400;" href="{{product.link_url}}">view</a></span>
-				<!-- <span style="display:block;"> <a class="pure-button" style="background: #5284BF; color:#fff;font-weight:400;" href="#">save </a></span> -->
-				</div>
-			</div>
-			</div>
-			  </li>
-			    </div>
-
-
-			  <button class="pure-button" style="width:100%; color:#5284BF; " ng-click="showMore()" ng-show="products.length>0 && productsDisplayed <= products.length">
-		  	scroll/click for more ({{products.length - productsDisplayed}})
-		  </button> 
-	</div>
-</div>
-<div class="left_container">
+    </div>			
+  </div>
+  <div class="left_container">
 		<div class="row">
 		<div class="large-12 columns" style="">
 
@@ -194,6 +93,50 @@ border-top: 1px solid #d5e1ef;background:#f6f6f6;">
 		</div>
 	</div>
 	</div>
+</div>
+  <div class="container">
+	  <div class="row mobile-hide" style="background:#fff; margin-top:10px; border-radius:5px;">
+	  <div class="small-4 columns">
+		  <div class="" style="margin-top:10px;padding: 10px;margin-bottom:10px;width:100%;height:38px;color:#5284BF;font-size:18px; padding-bottom:5px; background: #f6f6f6; width:150px; border-radius:5px; border: 1px solid #d5e1ef;">
+			<i class="icon-ok" ng-show="products.length>0"></i>
+			<i class="icon-remove" ng-show="products.length==0" style=""></i>
+			{{products.length}} results
+			</div>
+	  </div>
+	  <div class="small-5 small-offset-3 columns">
+		  <a class="dropdown-toggle" style=""> 
+		  <div style="display: inline-block; float:right; padding-bottom: 5px;margin-top:10px;padding: 10px;width:100%; text-align:right;height:25px;color:#5284BF;font-size:18px;">
+			<li class="dropdown" ng-controller="SearchProductsCtrl">
+				<span style="color:#5284BF !important;">
+				sort by
+			  </span>
+			  <span style="color:#5284BF !important;background:#f6f6f6; padding:10px; border-radius:5px; border: 1px solid #d5e1ef;">
+			  {{productService.order[1]}}<span class="sosa-down_alt" style="font-size:18px; color:#5284BF; padding-left:5px; "></span>
+			  </span>
+ 		 	  <ul class="dropdown-menu" style="background: #5284BF;width:150px !important; margin-left:100px;">
+	    		<li ng-repeat="order in items" style="padding-bottom:5px;">
+	      		  <a ng-click="setOrder(order)" style="background:#5284BF;">{{order[1]}}</a>
+	    		</li>
+  			</ul>
+		  </li>
+		  </div> 
+		  </a>
+	  </div>
+	  </div>
+	  <div class="products">
+	    <div style="padding-top:40px;text-align:center;font-family:'Open Sans'; font-size:22px; color: #4e81c2;" ng-show="products.length==0">
+		  	No Results Found
+	    </div>
+	    <div infinite-scroll='showMore()' infinite-scroll-distance='2'>
+		    <li ng-repeat="product in products | orderBy: productService.order | limitTo:productsDisplayed ">
+		   <div tv-results ng-show="currentSearch.product_type=='television'"></div>
+			    	  </li>
+			  <button class="pure-button" style="width:100%; color:#5284BF; " ng-click="showMore()" ng-show="products.length>0 && productsDisplayed <= products.length">
+		  	scroll/click for more ({{products.length - productsDisplayed}})
+		  </button> 
+	</div>
+</div>
+
 <div class="footer">
 </div>
-</div>
+
