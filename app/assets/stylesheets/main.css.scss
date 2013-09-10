@@ -353,10 +353,14 @@ li{
   display:inline-block;
   width:27%;
 }
-
+.mobile-height{
+    height:180px;
+  }
 
 @media only screen and (max-width: 999px) and (min-width: 768px){
-  
+  .mobile-height{
+    height:180px;
+  }
   .container{
     width: 100%;
     height: 600px;
