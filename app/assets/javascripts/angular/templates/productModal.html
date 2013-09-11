@@ -1,11 +1,17 @@
 <div class="modal-header">
-  <h1>{{product.description}}</h1>
+  <h2 style="color: #5284BF">Choose a Product</h2>
 </div>
 <div class="modal-body">
-	<img src="{{product.image_url}}"/>
- {{product.make}} 
- {{product.properties.screen_size}}
- <div>
- <a href="{{product.link_url}}"><span style="color:#4e81c2;">Click to go to product</span></a>
-</div>
-</div>
+	<div class="row product-select">
+		<div class="large-12 columns" style="height:100px; text-align:center;">
+			 <div class="sosa-tv large" style="color:#afafaf;" ng-click="currentSearch.product_type='television';close();">  </div>
+	
+		</div>
+	</div>
+	<div class="row product-select">
+		<div class="large-12 columns" style="height:100px; text-align:center;">
+		<div class="sosa-macbook large" style="color:#afafaf;" ng-click="currentSearch.product_type='laptop';close();"></div>
+	</div>
+	</div> 
+ </div>
+

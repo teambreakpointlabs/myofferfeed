@@ -1,11 +1,4 @@
 directives
-.directive('header', function () {
-    return {
-        restrict: 'A',
-        replace: true,
-        templateUrl:'<%= asset_path('angular/templates/header.html') %>'
-    }
-})
 .directive('icons', function (){
 	return{
 		restrict: 'A',
@@ -39,5 +32,12 @@ directives
 		restrict: 'A',
 		replace: true,
 		templateUrl: '<%= asset_path('angular/templates/tvResults.html')%>'
+	}
+})
+.directive('laptopResults', function(){
+	return{
+		restrict: 'A',
+		replace: true,
+		templateUrl: '<%= asset_path('angular/templates/laptopResults.html')%>'
 	}
 });

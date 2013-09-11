@@ -52,8 +52,11 @@
 	<div class="section_title" >
 		product type <!-- <span class="sosa-down_alt"></span> -->
 	</div>
-	<div class="product_section"  style="width:100%">
-	 <span class="sosa-tv icon"> <span class="product">television</span> </span>
+	<div class="product_section"  style="width:100%;" ng-show="currentSearch.product_type == 'television'">
+	 <span class="sosa-tv icon" > <span class="product" style="color:#afafaf;"  ng-click="displayProduct();">{{currentSearch.product_type}}</span> </span>
+	</div>
+		<div class="product_section"  style="width:100%; color:#5284BF;" ng-show="currentSearch.product_type == 'laptop'">
+	 <span class="sosa-macbook icon" > <span class="product" style="color:#afafaf;"  ng-click="displayProduct();">{{currentSearch.product_type}}</span> </span>
 	</div>
 </div>
 <div class="bubble_res" style="height:464px; margin-top:10px; width:100%;">
@@ -130,7 +133,8 @@
 	    <div infinite-scroll='showMore()' infinite-scroll-distance='2'>
 		    <li ng-repeat="product in products | orderBy: productService.order | limitTo:productsDisplayed ">
 		   <div tv-results ng-show="currentSearch.product_type=='television'"></div>
-			    	  </li>
+		    <div laptop-results ng-show="currentSearch.product_type=='laptop'"></div>
+			</li>
 			  <button class="pure-button" style="width:100%; color:#5284BF; " ng-click="showMore()" ng-show="products.length>0 && productsDisplayed <= products.length">
 		  	scroll/click for more ({{products.length - productsDisplayed}})
 		  </button> 

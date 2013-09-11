@@ -19,7 +19,8 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 	AffiliateService.applyAffiliateLinks();
   
 	$scope.getProducts = function(productType){
-		$scope.searchService.saveInitialSearch(productType);
+		console.log('getting tvs');
+	    $scope.searchService.saveInitialSearch(productType);
 		$location.path('/app');
 		AffiliateService.applyAffiliateLinks();
 	}
@@ -35,10 +36,11 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 		console.log($scope.filter);
 	}    
 	$scope.displayProduct = function(product){
+		var currentSearch = $scope.currentSearch;
 		var dialogOpts = {
 			resolve: {
-				product: function(){
-					return product;
+				currentSearch: function(){
+					return currentSearch;
 				}
 			},
 			dialogFade: true,
@@ -102,8 +104,16 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 		dialog.open('<%= asset_path('angular/templates/filterModal.html') %>');
 	}
 }])
-.controller('DialogCtrl', ['$scope', 'product', function($scope, product){
-	$scope.product = product;
+.controller('DialogCtrl', ['$scope','SearchService','currentSearch','ProductService','AffiliateService','dialog',function($scope,SearchService,currentSearch,ProductService,AffiliateService,dialog){
+	$scope.currentSearch = currentSearch;
+	$scope.close = function(){
+	console.log('closed dialog');
+  	SearchService.saveCurrentSearchInSession(currentSearch);
+  	ProductService.getProductsByCurrentSearch(currentSearch);
+  	AffiliateService.applyAffiliateLinks();
+		dialog.close();
+	}
+
 }])
 .controller('DialogSearchFilterCtrl',['$scope', 'dialog', 'currentSearch', 'ProductService','AffiliateService','SearchService', function($scope, dialog, currentSearch, ProductService, AffiliateService, SearchService){
 	$scope.currentSearch = currentSearch;

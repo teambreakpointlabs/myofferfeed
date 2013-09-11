@@ -110,6 +110,10 @@ return {
     switch (productType){
     	case 'television':
     	initialSearch = new TvSearch();
+    	break;
+    	case 'laptop':
+    	initialSearch = new LaptopSearch();
+    	break;
     }
     $cookieStore.put('currentSearch', initialSearch);
     console.log('saved...');

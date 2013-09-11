@@ -18,3 +18,4 @@ Search.prototype.getMakes = function(){
 Search.prototype.getRetailers = function(){
 	return this.retailers;
 }
+
