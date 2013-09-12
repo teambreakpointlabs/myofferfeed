@@ -110,7 +110,7 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 	console.log('closed dialog');
   	SearchService.saveCurrentSearchInSession(currentSearch);
   	ProductService.getProductsByCurrentSearch(currentSearch);
-  	AffiliateService.applyAffiliateLinks();
+  	// AffiliateService.applyAffiliateLinks();
 		dialog.close();
 	}
 
