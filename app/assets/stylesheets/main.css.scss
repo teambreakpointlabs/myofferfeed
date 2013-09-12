@@ -335,6 +335,10 @@ li{
     height:540px;
      overflow:scroll;
      -webkit-overflow-scrolling: touch;
+     border-left:1px solid #d5e1ef;
+     border-right:1px solid #d5e1ef;
+     border-bottom:1px solid #d5e1ef;
+     border-radius:5px;
   }
   .second_column{
     padding-top:60px; 
