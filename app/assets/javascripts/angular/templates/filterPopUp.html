@@ -3,7 +3,7 @@
 <div class="modal-header" style="text-align:center;">
 <h1 style="color: #5284BF;">Price</h1>
 </div>
-<div class="large-6 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='television'">
+<div class="large-5 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='television'">
 	<h4 style="color: #5284BF;  font-family: 'Open Sans';"> Min </h4>
   	<select ng-model="currentSearch.price_min" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
   		<option>0</option>
@@ -26,7 +26,7 @@
       <option>5000</option>
     </select>
 </div>
-<div class="large-6 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='laptop'">
+<div class="large-5 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='laptop'">
   <h4 style="color: #5284BF;  font-family: 'Open Sans';"> Min </h4>
     <select ng-model="currentSearch.price_min" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
       <option>0</option>
@@ -40,7 +40,7 @@
       <option>800</option>
     </select>
 </div>
-<div class="large-6 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='television'">
+<div class="large-5 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='television'">
   <h4 style="color: #5284BF; font-family: 'Open Sans';"> Max </h4>
     <select ng-model="currentSearch.price_max" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
   		<option>no max</option>
@@ -68,7 +68,7 @@
       <option>5000</option>
     </select>
 </div>
-<div class="large-6 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='laptop'">
+<div class="large-5 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='laptop'">
   <h4 style="color: #5284BF; font-family: 'Open Sans';"> Max </h4>
     <select ng-model="currentSearch.price_max" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
       <option>no max</option>
@@ -91,7 +91,7 @@
 <div class="modal-header" style="text-align:center;">
 <h1 style="color: #5284BF;">Screen Size</h1>
 </div>
-<div class="large-6 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='television'">
+<div class="large-5 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='television'">
   <h4 style="color: #5284BF;  font-family: 'Open Sans';"> Min </h4>
     <select ng-model="currentSearch.screen_min" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
       <option>0</option>
@@ -109,7 +109,7 @@
       <option>70</option>
     </select>
 </div>
-<div class="large-6 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='laptop'">
+<div class="large-5 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='laptop'">
   <h4 style="color: #5284BF;  font-family: 'Open Sans';"> Min </h4>
     <select ng-model="currentSearch.screen_min" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
       <option>0</option>
@@ -120,7 +120,7 @@
       <option>21</option>
     </select>
 </div>
-<div class="large-6 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='television'">
+<div class="large-5 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='television'">
   <h4 style="color: #5284BF; font-family: 'Open Sans';"> Max </h4>
     <select ng-model="currentSearch.screen_max" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
       <option>no max</option>
@@ -140,7 +140,7 @@
       <option>90</option>
     </select>
 </div>
-<div class="large-6 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='laptop'">
+<div class="large-5 columns" style="padding-top: 10px;" ng-show="currentSearch.product_type=='laptop'">
   <h4 style="color: #5284BF; font-family: 'Open Sans';"> Max </h4>
     <select ng-model="currentSearch.screen_max" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
       <option>no max</option>
@@ -154,10 +154,11 @@
 </div>
 <div ng-show="currentSearch.modal == 'make'">
 <div class="row">
- <div class="large-10 large-centered columns" ng-show="currentSearch.product_type=='television'">
+  <div class="large-10 large-centered columns">
 <div class="modal-header" style="text-align:center;">
 <h1 style="color: #5284BF;">Make</h1>
 </div>
+ 
   <select ng-model="currentSearch.makes[0]" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
     <option>all</option>
     <option>Bush</option>
@@ -176,30 +177,12 @@
     <option>Sony</option>
     <option>Toshiba</option>
   </select>
-  
-</div>
-<div class="large-10 large-centered columns" ng-show="currentSearch.product_type=='laptop'">
-<div class="modal-header" style="text-align:center;">
-<h1 style="color: #5284BF;">Make</h1>
-</div>
-  <select ng-model="currentSearch.makes[0]" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
-    <option>all</option>
-    <option>Acer</option>
-    <option>Asus</option>
-    <option>Compaq</option>
-    <option>Dell</option>
-    <option>Hp</option>
-    <option>Lenovo</option>
-    <option>Samsung</option>
-    <option>Sony</option>
-    <option>Toshiba</option>
-  </select>
 </div>
 </div>
 </div>
 <div ng-show="currentSearch.modal == 'retailer'">
 <div class="row">
-  <div class="large-10 large-centered columns" ng-show="currentSearch.product_type=='television'">
+  <div class="large-10 large-centered columns">
 <div class="modal-header" style="text-align:center;">
 <h1 style="color: #5284BF;">Retailer</h1>
 </div>
@@ -212,17 +195,6 @@
     <option>Currys</option>
     <option>John Lewis</option>
     <option>Tesco</option>
-  </select>
-</div>
-</div>
-<div class="large-10 large-centered columns" ng-show="currentSearch.product_type=='laptop'">
-<div class="modal-header" style="text-align:center;">
-<h1 style="color: #5284BF;">Retailer</h1>
-</div>
- 
-  <select ng-model="currentSearch.retailers[0]" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
-    <option>all</option>
-    <option>Currys</option>
   </select>
 </div>
 </div>
