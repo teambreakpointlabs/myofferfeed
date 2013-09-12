@@ -199,7 +199,7 @@
 </div>
 <div ng-show="currentSearch.modal == 'retailer'">
 <div class="row">
-  <div class="large-10 large-centered columns">
+  <div class="large-10 large-centered columns" ng-show="currentSearch.product_type=='television'">
 <div class="modal-header" style="text-align:center;">
 <h1 style="color: #5284BF;">Retailer</h1>
 </div>
@@ -212,6 +212,17 @@
     <option>Currys</option>
     <option>John Lewis</option>
     <option>Tesco</option>
+  </select>
+</div>
+</div>
+<div class="large-10 large-centered columns" ng-show="currentSearch.product_type=='laptop'">
+<div class="modal-header" style="text-align:center;">
+<h1 style="color: #5284BF;">Retailer</h1>
+</div>
+ 
+  <select ng-model="currentSearch.retailers[0]" style="font-family: 'Open Sans'; font-size: 20px; color: #5284BF;">
+    <option>all</option>
+    <option>Currys</option>
   </select>
 </div>
 </div>
