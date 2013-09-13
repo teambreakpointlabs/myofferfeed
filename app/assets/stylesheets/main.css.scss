@@ -330,6 +330,7 @@ li{
   width:71%;
   float:right;
   height: 600px;
+  margin-right:10px;
   .products{
     background: #fff;
     height:520px;
@@ -366,7 +367,7 @@ li{
   }
   .container{
     width: 100%;
-   
+   height:auto;
    padding-top:0px;
   
     margin:40px 0 0 0;
@@ -377,6 +378,7 @@ li{
     overflow:scroll;
     text-align:center;
     margin-top:20px;
+    height:auto;
   }
 
    }
@@ -422,6 +424,7 @@ li{
     margin: auto 0;
     padding-top:0px;
     margin:40px 0 0 0;
+    height:auto;
   .second_column{
   padding-top:10px;
   }
@@ -433,6 +436,7 @@ li{
    text-align:center;
       -webkit-overflow-scrolling: touch;
       margin-top:20px;
+      height:auto;
   }
   }
   .result-individual{
