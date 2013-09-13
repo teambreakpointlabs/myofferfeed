@@ -56,7 +56,24 @@ a.pure-button.arrow{
 /** Media Queries **/
 
 @media only screen and (max-width: 999px) {
-
+  .view-button{
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Open Sans', Sans-Serif !important;
+  font-weight: 600 !important;
+  width:136px;
+  }
   .pure-button.sign-up{
     margin-bottom: 10px;
   }
@@ -68,6 +85,7 @@ a.pure-button.arrow{
     margin:5px;
     margin-top:65px;
   }
+
 
   a.pure-button.arrow{
     width: 100% !important;
@@ -81,5 +99,30 @@ a.pure-button.arrow{
 @media only screen and (max-width: 767px){
  .pure-button{
     margin-top:25px;
+  }
+    .view-button{
+      width: 100% !important;
+    height:45px;
+    padding-top:12px;
+    margin:5px;
+    margin-top:38px;
+  }
+  .view-button{
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Open Sans', Sans-Serif !important;
+  font-weight: 600 !important;
+  width:136px;
   }
 }

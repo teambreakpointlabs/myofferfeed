@@ -122,6 +122,9 @@ font-size: 22px !important;
 .mobile{
   display:none;
 }
+.tablet{
+display:none;
+}
 .dropdown{
   height:40px; 
   color: white;
@@ -138,6 +141,12 @@ font-size: 22px !important;
 }
 @media only screen and (max-width: 999px) and (min-width: 768px){
 .mobile{
+  display:none;
+}
+.mobile-tablet{
+display:block;
+}
+.tablet{
   display:block;
 }
 .dropdown{
@@ -155,7 +164,7 @@ font-size: 22px !important;
 }
 .fixed{
   position:fixed;
-  top:45px;
+  /**top:45px;**/
 }
 .filter_section_res{
       border-top: 1px solid #d5e1ef;
@@ -167,14 +176,19 @@ font-size: 22px !important;
 .mobile{
   display:block;
 }
+.tablet{
+  display:none;
+}
 .filter_section_res{
-      border-top: 1px solid #d5e1ef;
+    border-top: 1px solid #d5e1ef;
     padding: 20px;
 }
-
+tablet{
+  display:none;
+}
 .fixed{
   position:fixed;
-  top:45px;
+  /**top:45px;**/
 }
 .mobile-hide{
   display:none;
