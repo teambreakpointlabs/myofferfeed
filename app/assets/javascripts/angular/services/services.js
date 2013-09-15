@@ -32,7 +32,7 @@ services
 		if ((currentSearch.retailers[0]!="all")&&($.inArray(product.retailer, currentSearch.retailers)==-1) && (currentSearch.retailers.length!=0)){
 			return false;
 		}
-		if (product.product_type =='television'){
+		if (product.product_type =='television' || product.product_type == 'laptop'){
 			if ((product.properties.screen_size < currentSearch.screen_min) || (product.properties.screen_size > currentSearch.screen_max)){
 				return false;
 			}
