@@ -104,7 +104,7 @@ return {
   }
 
 	function saveInitialSearch(productType){
-		console.log('save initialSearch search');
+	console.log('save initialSearch search');
     var initialSearch;
 
     switch (productType){
