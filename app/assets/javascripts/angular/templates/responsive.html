@@ -13,7 +13,8 @@
   </nav>
   <div class="row mobile mobile-tablet fixed" style="background:#343434;padding-bottom:12px;">
 	  <div class="filter_holder_mobile" style="margin-top: 8px;padding-left:5px;padding-right:5px;">
-	  	<a href="http://www.specialoffershopper.co.uk" class="dropdown" style="color: #5284BF !important;display:inline-block;float:left;padding:10px;"> Back </a>
+	  	<a href="http://www.specialoffershopper.co.uk" class="dropdown" style="color: #5284BF !important;display:inline-block;float:left;padding:10px;" ng-show="!filter_drop"> Back </a>
+	  		<a href="http://www.specialoffershopper.co.uk" class="dropdown" style="color: #fff !important;display:inline-block;float:left;padding:10px;" ng-show="filter_drop"> Back </a>
 	  
    <!--  <a class="dropdown-toggle"> 
 		<div style="display:inline-block;">
@@ -32,10 +33,10 @@
 		  </li>
 		</div> 
 	  </a> -->
-		<div class="dropdown" style="color: #5284BF;display:inline-block;float:right;padding:10px;" ng-click="displayFilter();" ng-show="!filter_drop">
+		<div class="dropdown" style="color: #5284BF;display:inline-block;float:right;padding:8px;font-weight:500;" ng-click="displayFilter();" ng-show="!filter_drop">
 			Filter 
 		</div>
-	  <div class="dropdown" style="color: #5284BF;display:inline-block;float:right;padding:10px;" ng-click="filter_drop=false" ng-show="filter_drop">
+	  <div class="dropdown" style="color: #fff;display:inline-block;float:right;padding:8px;" ng-click="filter_drop=false" ng-show="filter_drop">
 			Hide
 		</div>
 		<div class="filter_dropdown" ng-show="filter_drop" style=" padding-top: 60px; border-top: 5px solid #d5e1ef;background:#f6f6f6;">
@@ -44,7 +45,7 @@
 			<div search-filter type="retailer" search="currentSearch" filter="filter(type)"></div>
 			<div search-filter type="screen" search="currentSearch" filter="filter(type)"></div>
 		</div>
-			<span style="color: #5284BF !important;display:inline-block;padding:10px;padding-top:15px;position-fixed;float:right;">{{products.length}} Results</span>
+			<span style="color: #5284BF !important;display:inline-block;padding:10px;padding-top:15px;position-fixed;float:right;font-weight:600;">{{products.length}} Results</span>
     </div>			
   </div>
   <div class="left_container">
@@ -145,5 +146,20 @@
 </div>
 
 <div class="footer">
+	 <a class="dropdown-toggle" style=""> 
+			<li class="dropdown" ng-controller="SearchProductsCtrl" style="">
+				<span style="color:#fff !important;">
+				Sort By
+			  </span>
+			  <span style="color:#fff !important;background:#f6f6f6; padding:10px; border-radius:5px; border: 1px solid #d5e1ef;">
+			  {{productService.order[1]}}
+			  </span>
+ 		 	  <ul class="dropdown-menu" style="background: #5284BF;width:100%; !important;margin-bottom:50px !important;">
+	    		<li ng-repeat="order in items" style="padding-bottom:5px;">
+	      		  <a ng-click="setOrder(order)" style="background:#5284BF;">{{order[1]}}</a>
+	    		</li>
+  			</ul>
+		  </li>
+		  </a>
 </div>
 
