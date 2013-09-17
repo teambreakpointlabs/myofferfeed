@@ -139,7 +139,7 @@
 		   <div tv-results ng-show="currentSearch.product_type=='television'"></div>
 		    <div laptop-results ng-show="currentSearch.product_type=='laptop'"></div>
 			</li>
-			  <button class="pure-button" style="width:100%; color:#5284BF; " ng-click="showMore()" ng-show="products.length>0 && productsDisplayed <= products.length">
+			  <button class="pure-button" style="width:100%; color:#5284BF; " ng-click="showMore()" ng-show="products.length>0 && productService.productsDisplayed <= products.length">
 		  	Scroll/Click for More ({{products.length - productsDisplayed}})
 		  </button> 
 	</div>
