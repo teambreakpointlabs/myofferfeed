@@ -19,6 +19,10 @@ services
 	var productsDisplayed = 10;
 	var order = ['new_price','price'];
 
+	function update(productsDisplayed){
+		angular.copy(productsDisplayed, productsDisplayed);
+	}
+
 	function meetsCriteria(product, currentSearch){
 		//console.log(product);
 		//console.log(currentSearch);
@@ -66,7 +70,8 @@ services
 		products: products,
 		getProductsByCurrentSearch: getProductsByCurrentSearch,
 		productsDisplayed: productsDisplayed,
-		order: order
+		order: order,
+		update: update
 }}])
 .factory('ProductTypeService',['ProductType', function(ProductType){
 	var productTypes = [];

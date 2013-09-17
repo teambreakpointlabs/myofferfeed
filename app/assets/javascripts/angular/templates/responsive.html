@@ -135,7 +135,7 @@
 		  	No Results Found
 	    </div>
 	    <div infinite-scroll='showMore()' infinite-scroll-distance='2'>
-		    <li ng-repeat="product in products | orderBy: productService.order | limitTo:productsDisplayed ">
+		    <li ng-repeat="product in products | orderBy: productService.order | limitTo:productService.productsDisplayed ">
 		   <div tv-results ng-show="currentSearch.product_type=='television'"></div>
 		    <div laptop-results ng-show="currentSearch.product_type=='laptop'"></div>
 			</li>
