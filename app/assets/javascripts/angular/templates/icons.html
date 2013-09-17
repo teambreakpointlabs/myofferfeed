@@ -1,23 +1,46 @@
 <div ng-controller="SearchProductsCtrl">
-	<div class="row products-container">
-      <div class="large-4 large-centered columns">
-		  <a ng-click="getProducts('television')">
-			  <div class="product">
-				  <span class="sosa-tv large fade-in"> </span>
-				  <div>Televisions</div>
+<div class="row" style="text-align:center;padding-top: 40px;padding-bottom: 20px;">
+	<div class="large-12 large-centered large-columns">
+		<div style="color:#afafaf;font-size:28px;margin-top:10px;"> select a product </div>
+	</div>
+</div>
+<div class="row" style="text-align:center;">
+	<div class="large-12 large-centered large-columns" style="">
+	<a ng-click="getProducts('television')">
+		<div style="color:#fff;"> <div class="sosa-tv large fade-in highlight"> <div style="font-size:28px;">Televisions</div></div></div>
+	</a>
+	</div>
+</div>
+
+	<div class="row"  style="text-align:center;">
+	<div class="large-12 large-centered large-columns" style="padding-bottom:40px;">
+		<a class="highlight" ng-click="getProducts('laptop')">
+		<div style="color:#fff;"> <div class="sosa-macbook large fade-in highlight"> <div style="font-size:28px;padding-left:10px;">Laptops</div>   </div></div>
+	</a>
+
+	</div>
+	</div>
+
+		
+	<!-- <div class="row products-container"> -->
+      <!-- <div class="large-4 large-centered large-columns"> -->
+		  <!-- <a ng-click="getProducts('television')"> -->
+			  <!-- <div class="product"> -->
+				  <!-- <span class="sosa-tv large fade-in"> </span> -->
+				  <!-- <div>Televisions</div> -->
 				 <!--  <div class="tagline">click to search</div> -->
-			  </div>
-		  </a>
-	  </div>
-		<div class="large-4 large-centered columns">
-			  <a ng-click="getProducts('laptop')">
-			  <div class="product">
-				    <span class="sosa-macbook large fade-in"></span>
-			  <div>Laptops</div>
-				 <!--  <div class="tagline">click to search</div> -->
-			  </div>
-		  </a>
-	  </div>
+			  <!-- </div> -->
+		  <!-- </a> -->
+	  <!-- </div> -->
+		<!-- <div class="large-4 large-centered columns"> -->
+			  <!-- <a ng-click="getProducts('laptop')"> -->
+			  <!-- <div class="product"> -->
+				    <!-- <span class="sosa-macbook large fade-in"></span> -->
+			  <!-- <div>Laptops</div> -->
+				  <!-- <div class="tagline">click to search</div> -->
+			  <!-- </div> -->
+		  <!-- </a> -->
+	  <!-- </div> -->
 	
 <!-- 	  <div class="large-4 columns">
 		  <div class="product">
@@ -26,7 +49,7 @@
 			  <div class="coming-soon">coming soon</div>
 		  </div>
 	  </div>-->
-	</div>
+	<!-- </div> -->
 	<!-- <div class="row">
 	<div class="large-6 columns">
 		Store this cookie: <input type="text" ng-model="cookieValue"></input>

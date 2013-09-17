@@ -6,11 +6,24 @@
   height:5px;
   background: #5284BF;
 }
+.background{
+  top:5px;
+  left: 0;
+  right:0;
+  background:url('background2.jpg') no-repeat center center;
+  background-size: cover;
+  position:absolute;
+}
 .top-bar .name h1 a{
  
-  font-weight: 400 !important;
+font-weight: 400 !important;
 font-family: Lato !important;
 font-size: 22px !important;
+}
+.highlight{
+  &:hover{
+    color: #afafaf;
+  }
 }
 
 .bubble_res {
@@ -69,7 +82,7 @@ font-size: 22px !important;
     padding:5px;
     padding-left: 10px;
     padding-right:10px;
-    postion: relative;
+    position: relative;
     font-weight:400;
     border: 1px solid #d5e1ef;
 }
@@ -80,7 +93,7 @@ font-size: 22px !important;
     padding:5px;
     padding-left: 10px;
     padding-right:10px;
-    postion: relative;
+    position: relative;
     font-weight:400;
     width:100%;
     text-align:center;
@@ -97,7 +110,7 @@ font-size: 22px !important;
     padding:5px;
     padding-left: 10px;
     padding-right:10px;
-    postion: relative;
+    position: relative;
     font-weight:400 !important;
     border: 1px solid #d5e1ef;
 }

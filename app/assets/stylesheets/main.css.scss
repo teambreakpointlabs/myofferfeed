@@ -143,7 +143,10 @@ a{
   color:#1e81c2;
   font-family: 'Open Sans', sans-serif !important;
   text-align: center;
-  font-size: 60px;
+
+  .title{
+   font-size: 60px;
+  }
 
   margin-top: 80px;
   
@@ -153,7 +156,9 @@ a{
   }
 
 }
-
+  .background{
+  height:540px;
+  }
 /**.footer{
   height:50px; 
   border-top:4px solid #25a9df;
@@ -365,6 +370,11 @@ li{
   .mobile-height{
     height:145px;
   }
+  .title-content{
+  .title{
+   font-size: 60px;
+  }
+  }
   .container{
     width: 100%;
    height:auto;
@@ -409,12 +419,25 @@ li{
   .bubble_res{
   font-size: 15px !important;
   }
-
+  .background{
+  height:540px;
+  }
 }
 
 @media only screen and (max-width: 767px){
   .left_container{
   display:none;
+  }
+    .title-content{
+  .title{
+   font-size: 34px;
+  }
+  .title-tagline{
+  font-size:20px;
+  }
+  }
+  .background{
+  height:540px;
   }
   .mobile-height{
     height:120px;
