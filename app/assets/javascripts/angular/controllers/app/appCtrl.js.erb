@@ -58,7 +58,7 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 	$scope.setOrder = function(orderBy){
 		console.log('setting order - ' + orderBy);
 		$scope.productService.order = orderBy;
-		$scope.productService.productsDisplayed = 5;
+		$scope.productService.productsDisplayed = 3;
 	}
 
 	$scope.filter = function(type){
