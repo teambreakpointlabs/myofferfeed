@@ -8,14 +8,14 @@ http://www.argos.co.uk/static/Product/partNumber/1087015.htm;http://argos.scene7
 http://www.argos.co.uk/static/Product/partNumber/1020450.htm;http://argos.scene7.com/is/image/Argos/1020450_R_SET?$Listers$;499.99;20;399.99;Argos;HP;15.6;laptop;5;
 http://www.argos.co.uk/static/Product/partNumber/1085859.htm;http://argos.scene7.com/is/image/Argos/1085859_R_SET?$Listers$;499.99;20;399.99;Argos;HP;15.6;laptop;5;
 http://www.argos.co.uk/static/Product/partNumber/1087039.htm;http://argos.scene7.com/is/image/Argos/1087039_R_SET?$Listers$;499.99;20;399.99;Argos;HP;15.6;laptop;5;
-http://www.argos.co.uk/static/Product/partNumber/1214008.htm;http://argos.scene7.com/is/image/Argos/1214008_R_SET?$Listers$;349.99;20;279.99;Argos;Packard;15.6;laptop;6;
+http://www.argos.co.uk/static/Product/partNumber/1214008.htm;http://argos.scene7.com/is/image/Argos/1214008_R_SET?$Listers$;349.99;20;279.99;Argos;Packard Bell;15.6;laptop;6;
 http://www.argos.co.uk/static/Product/partNumber/1088935.htm;http://argos.scene7.com/is/image/Argos/1088935_R_SET?$Listers$;329.99;70.00;259.99;Argos;Toshiba;15.6;laptop;22;
-http://www.argos.co.uk/static/Product/partNumber/1083648.htm;http://argos.scene7.com/is/image/Argos/1083648_R_SET?$Listers$;299.99;50.00;249.99;Argos;Packard;15.6;laptop;17;
+http://www.argos.co.uk/static/Product/partNumber/1083648.htm;http://argos.scene7.com/is/image/Argos/1083648_R_SET?$Listers$;299.99;50.00;249.99;Argos;Packard Bell;15.6;laptop;17;
 http://www.argos.co.uk/static/Product/partNumber/1383678.htm;http://argos.scene7.com/is/image/Argos/1383678_R_SET?$Listers$;429.99;30.00;399.99;Argos;Acer;15.6;laptop;7;
 http://www.argos.co.uk/static/Product/partNumber/1380327.htm;http://argos.scene7.com/is/image/Argos/1380327_R_SET?$Listers$;399.99;20.00;379.99;Argos;Acer;15.6;laptop;6;
 http://www.argos.co.uk/static/Product/partNumber/5074691.htm;http://argos.scene7.com/is/image/Argos/5074691_R_SET?$Listers$;349.99;10.00;339.00;Argos;Asus;14.1;laptop;3;
 http://www.argos.co.uk/static/Product/partNumber/5074976.htm;http://argos.scene7.com/is/image/Argos/5074976_R_SET?$Listers$;349.99;10.00;339.00;Argos;Asus;14.1;laptop;3;
-http://www.argos.co.uk/static/Product/partNumber/1149214.htm;http://argos.scene7.com/is/image/Argos/1149214_R_SET?$Listers$;399.99;70.00;329.99;Argos;Packard;15.6;laptop;18;
+http://www.argos.co.uk/static/Product/partNumber/1149214.htm;http://argos.scene7.com/is/image/Argos/1149214_R_SET?$Listers$;399.99;70.00;329.99;Argos;Packard Bell;15.6;laptop;18;
 http://www.argos.co.uk/static/Product/partNumber/5074842.htm;http://argos.scene7.com/is/image/Argos/5074842_R_SET?$Listers$;549.99;50.00;499.99;Argos;Toshiba;15.6;laptop;10;
 http://www.argos.co.uk/static/Product/partNumber/5089002.htm;http://argos.scene7.com/is/image/Argos/5089002_R_SET?$Listers$;499.99;10;449.99;Argos;Asus;15.6;laptop;3;
 http://www.argos.co.uk/static/Product/partNumber/5074701.htm;http://argos.scene7.com/is/image/Argos/5074701_R_SET?$Listers$;449.99;20.00;429.99;Argos;Toshiba;13.3;laptop;5;
@@ -35,7 +35,7 @@ http://www.currys.co.uk/gbuk/computing/laptops/laptops/lenovo-miix-10-1-touchscr
 http://www.currys.co.uk/gbuk/computing/laptops/laptops/asus-n550lf-ck026h-15-6-touchscreen-laptop-silver-21460359-pdt.html;http://brain.pan.e-merchant.com/9/5/21460359/t_21460359.jpg;799.99;50.00;749.99;Currys;Asus;15.6;laptop;7;
 http://www.currys.co.uk/gbuk/computing/laptops/laptops/samsung-series-3-np370r5e-15-6-laptop-marble-white-21519969-pdt.html;http://brain.pan.e-merchant.com/9/6/21519969/t_21519969.jpg;429.99;30.00;399.99;Currys;Samsung;15.6;laptop;7;
 http://www.currys.co.uk/gbuk/computing/laptops/laptops/acer-v5-571p-15-6-touchscreen-laptop-silver-21295612-pdt.html;http://brain.pan.e-merchant.com/2/1/21295612/t_21295612.jpg;699.99;50.00;649.99;Currys;Acer;15.6;laptop;8;
-http://www.currys.co.uk/gbuk/computing/laptops/laptops/packard-bell-easynote-te11-15-6-laptop-21414717-pdt.html;http://brain.pan.e-merchant.com/7/1/21414717/t_21414717.jpg;399.99;120.00;279.99;Currys;Packard;15.6;laptop;31;
+http://www.currys.co.uk/gbuk/computing/laptops/laptops/packard-bell-easynote-te11-15-6-laptop-21414717-pdt.html;http://brain.pan.e-merchant.com/7/1/21414717/t_21414717.jpg;399.99;120.00;279.99;Currys;Packard Bell;15.6;laptop;31;
 http://www.currys.co.uk/gbuk/computing/laptops/laptops/asus-v550ca-cj105h-15-6-touchscreen-laptop-dark-grey-21490050-pdt.html;http://brain.pan.e-merchant.com/0/5/21490050/t_21490050.jpg;599.99;20.00;579.99;Currys;Asus;15.6;laptop;4;
 http://www.currys.co.uk/gbuk/computing/laptops/laptops/samsung-series-3-np370r5e-15-6-laptop-red-white-21519970-pdt.html;http://brain.pan.e-merchant.com/0/7/21519970/t_21519970.jpg;429.99;30.00;399.99;Currys;Samsung;15.6;laptop;7;
 http://www.currys.co.uk/gbuk/computing/laptops/laptops/acer-aspire-v5-471p-i3-14-touchscreen-laptop-silver-21293286-pdt.html;http://brain.pan.e-merchant.com/6/8/21293286/t_21293286.jpg;489.99;40.00;449.99;Currys;Acer;14;laptop;9;
