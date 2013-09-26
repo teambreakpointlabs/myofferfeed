@@ -52,7 +52,7 @@
 		<div class="row">
 		<div class="large-12 columns" style="">
 
-<div class="bubble_res" style="width:100%; margin-top:10px;">
+<div class="bubble_res" style="position:fixed; margin-top:10px;">
 	<div class="section_title" >
 		Product Type <!-- <span class="sosa-down_alt"></span> -->
 	</div>
@@ -63,7 +63,7 @@
 	 <span class="sosa-macbook icon" > <span class="product" style="color:#afafaf;"  ng-click="displayProduct();">{{currentSearch.product_type}}</span> </span>
 	</div>
 </div>
-<div class="bubble_res" style="height:440px; margin-top:10px; width:100%;">
+<div class="bubble_res" style="height:440px; margin-top:10px; position:fixed; top:220px;">
 	<div class="section_title" style="">
 		Filter By
 	</div>
@@ -130,7 +130,7 @@
 		  </a>
 	  </div>
 	  </div>
-	  <div class="products">
+	  <div class="products" style="height:auto;">
 	    <div style="padding-top:40px;text-align:center;font-family:'Open Sans'; font-size:22px; color: #4e81c2;" ng-show="products.length==0">
 		  	No Results Found
 	    </div>
@@ -140,7 +140,7 @@
 		    <div laptop-results ng-show="currentSearch.product_type=='laptop'"></div>
 			</li>
 			  <button class="pure-button" style="width:100%; color:#5284BF; " ng-click="showMore()" ng-show="products.length>0 && productService.productsDisplayed <= products.length">
-		  	Scroll/Click for More ({{products.length - productsDisplayed}})
+		  		  	Show More... ({{products.length - productsDisplayed}})
 		  </button> 
 	</div>
 </div>
