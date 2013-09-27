@@ -62,7 +62,7 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 	}
 
 	$scope.filter = function(type){
-	$('html,body').scrollTop(0);
+	
     $scope.currentSearch.modal = type;
     var currentSearch = $scope.currentSearch;
 		var opts = {
@@ -78,7 +78,7 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 
 		var dialog = $dialog.dialog(opts);
 		dialog.open('<%= asset_path('angular/templates/filterPopUp.html') %>');
-
+        $('html,body').scrollTop(0);
 		$scope.productService.productsDisplayed = 10;
 	}
 }])
@@ -109,6 +109,7 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 .controller('DialogCtrl', ['$scope','SearchService','currentSearch','ProductService','AffiliateService','dialog',function($scope,SearchService,currentSearch,ProductService,AffiliateService,dialog){
 	$scope.currentSearch = currentSearch;
 	$scope.close = function(){
+	$('html,body').scrollTop(0);
 	console.log('closed dialog');
 	SearchService.saveInitialSearch(currentSearch.product_type);
 	SearchService.populateSearch();
