@@ -157,14 +157,7 @@ return {
 		console.log('applying skimlinks script');
 		$.ajax({
  		  url: 'http://s.skimresources.com/js/54354X1347041.skimlinks.js',
- 		  dataType: "script",
- 		  success: function(msg){
- 		  	console.log(msg);
- 		  },
- 		  error: function(xhr, err){
- 		  	console.log(xhr);
- 		  	console.log(err);
- 		  }
+ 		  dataType: "script"
 		});
 	};
 	return{
