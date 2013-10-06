@@ -156,6 +156,7 @@ return {
 	var applyAffiliateLinks = function(){
 		console.log('applying skimlinks script');
 		$.ajax({
+		  type: "GET",
  		  url: "http://s.skimresources.com/js/54354X1347041.skimlinks.js",
  		  dataType: "script"
 		});
