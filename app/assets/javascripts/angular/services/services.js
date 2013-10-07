@@ -155,12 +155,10 @@ return {
 	//execute skimlinks function on links appended to DOM
 	var applyAffiliateLinks = function(){
 		console.log('applying skimlinks script');
-		$( document ).ready(function() {
-	  		$.ajax({
-	 		  url: 'http://s.skimresources.com/js/54354X1347041.skimlinks.js',
-	 		  dataType: 'script'
-			});
-  		});
+		$.ajax({
+ 		  url: 'http://s.skimresources.com/js/54354X1347041.skimlinks.js',
+ 		  dataType: 'script'
+		});
 	};
 	return{
 		applyAffiliateLinks: applyAffiliateLinks
