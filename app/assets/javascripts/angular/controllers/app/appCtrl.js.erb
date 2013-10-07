@@ -22,12 +22,18 @@ controllers.controller('SearchProductsCtrl',['$scope', '$location','ProductServi
 		console.log('getting tvs');
 	    $scope.searchService.saveInitialSearch(productType);
 		$location.path('/app');
-		AffiliateService.applyAffiliateLinks();
+		$.ajax({
+	 		  url: 'http://s.skimresources.com/js/54354X1347041.skimlinks.js',
+	 		  dataType: 'script'
+			});
 	}
 
 	$scope.showMore = function(){
 		$scope.productService.productsDisplayed += 10;
-		AffiliateService.applyAffiliateLinks();
+		$.ajax({
+	 		  url: 'http://s.skimresources.com/js/54354X1347041.skimlinks.js',
+	 		  dataType: 'script'
+			});
 	}
 
 	$scope.displayFilter = function(){
