@@ -92,7 +92,7 @@ $input-selected-background-color: #444444;
 
 body{
  
-  background:url('background.JPG');
+  /**background:url('background.JPG');**/
   width: 100%;
   margin: 0;
   padding: 0;
@@ -156,9 +156,9 @@ a{
   }
 
 }
-.background{
+/**.background{
   height:580px;
-  }
+  }**/
 /**.footer{
   height:50px; 
   border-top:4px solid #25a9df;
@@ -419,9 +419,9 @@ li{
   .bubble_res{
   font-size: 15px !important;
   }
-  .background{
+  /**.background{
   height:560px;
-  }
+  }**/
 }
 
 @media only screen and (max-width: 767px){
@@ -438,9 +438,9 @@ li{
   padding-bottom: 25px !important;
   }
   }
-  .background{
+  /**.background{
   height:550px;
-  }
+  }**/
   .mobile-height{
     height:120px;
   }
